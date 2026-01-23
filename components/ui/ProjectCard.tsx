@@ -58,7 +58,7 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
           <li>Outcome: {project.outcome}</li>
         </ul>
         <Link
-          href={project.link}
+          href={`/case-study/${project.id}`}
           className="inline-flex items-center text-stone-900 font-medium border-b border-stone-900 pb-0.5 hover:text-orange-600 hover:border-orange-600 transition-colors focus:outline-none focus:text-orange-600 focus:border-orange-600"
         >
           Read Case Study
