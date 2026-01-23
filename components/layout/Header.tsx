@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import { useScrollDetection, useMobileMenu } from '@/lib/hooks';
-import { MobileMenu } from '@/components/ui/MobileMenu';
-import { BRAND_NAME, NAV_LINKS, MOBILE_NAV_LINKS } from '@/lib/constants';
-import { handleSmoothScroll } from '@/lib/utils';
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { useScrollDetection, useMobileMenu } from "@/lib/hooks";
+import { MobileMenu } from "@/components/ui/MobileMenu";
+import { BRAND_NAME, NAV_LINKS, MOBILE_NAV_LINKS } from "@/lib/constants";
+import { handleSmoothScroll } from "@/lib/utils";
 
 /**
  * Main header component with navigation and mobile menu
@@ -16,15 +16,13 @@ export function Header() {
 
   // Handle smooth scroll and hash removal for "Get in touch" button
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    handleSmoothScroll(e, '#contact', true);
+    handleSmoothScroll(e, "#contact", true);
   };
 
   return (
     <header
       className={`fixed w-full z-50 top-0 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#F9F8F6]/90 backdrop-blur-md shadow-sm py-4'
-          : 'py-6'
+        isScrolled ? "bg-[#F9F8F6]/90 backdrop-blur-md shadow-sm py-4" : "py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
@@ -33,7 +31,7 @@ export function Header() {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className="font-serif text-xl font-bold tracking-tight text-stone-900 z-50 relative hover:text-orange-600 transition-colors focus:outline-none focus:text-orange-600"
           aria-label="Home"
@@ -70,7 +68,7 @@ export function Header() {
         <button
           onClick={toggle}
           className="md:hidden z-50 relative text-stone-900 hover:text-orange-600 transition-colors focus:outline-none focus:text-orange-600 p-2 -mr-2"
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >

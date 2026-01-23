@@ -1,7 +1,8 @@
-import Link from 'next/link';
-import { ArrowDownRight, ArrowDown } from 'lucide-react';
-import { Reveal } from '@/components/ui/Reveal';
-import { HERO } from '@/lib/constants';
+import Link from "next/link";
+import { ArrowDownRight, ArrowDown } from "lucide-react";
+import { Reveal } from "@/components/ui/Reveal";
+import { HERO, Profile_Img } from "@/lib/constants";
+import Image from "next/image";
 
 /**
  * Hero section - main landing area with headline and abstract visual
@@ -16,11 +17,11 @@ export function HeroSection() {
             <p className="text-orange-600 font-medium tracking-wide text-sm mb-6 uppercase">
               {HERO.tagline}
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.1] mb-8 text-stone-900 font-serif">
+            <h1 className="text-5xl md:text-7xl lg:text-5xl font-medium leading-[1.1] mb-8 text-stone-900 font-serif">
               {HERO.headline} <br />
               <span className="italic font-light">{HERO.headlineItalic}</span>
             </h1>
-            <p className="text-xl md:text-2xl text-stone-600 font-light leading-relaxed max-w-2xl mb-12">
+            <p className="text-xl md:text-xl text-stone-600 font-light leading-relaxed max-w-2xl mb-12">
               {HERO.description}
             </p>
 
@@ -42,22 +43,11 @@ export function HeroSection() {
         {/* Abstract Image Block */}
         <div className="hidden lg:block lg:col-span-4">
           <Reveal delay={200}>
-            <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden border border-stone-200 bg-stone-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div
-                  className="w-40 h-40 border border-stone-300 rounded-full absolute top-10 right-10 opacity-50"
-                  aria-hidden="true"
-                />
-                <div
-                  className="w-32 h-32 bg-stone-200 rounded-full mix-blend-multiply filter blur-xl absolute bottom-20 left-10"
-                  aria-hidden="true"
-                />
-                <div
-                  className="w-full h-px bg-stone-300 rotate-45 absolute"
-                  aria-hidden="true"
-                />
+            <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden ">
+              <div className="absolute inset-0 flex items-center justify-center h-[85%] rounded-m">
+                <Image src={Profile_Img} alt="" fill className="object-cover" />
               </div>
-              <div className="absolute bottom-6 left-6 right-6">
+              <div id="img" className="absolute bottom-6 left-6 right-6">
                 <div className="flex justify-between text-xs font-mono text-stone-500 uppercase">
                   <span>Loc: {HERO.location}</span>
                   <span>Exp: {HERO.experience}</span>

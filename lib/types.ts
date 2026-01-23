@@ -1,3 +1,6 @@
+import { Interface } from "node:readline";
+import { StaticImageData } from "next/image";
+
 /**
  * Navigation link structure
  */
@@ -55,7 +58,6 @@ export interface SocialLink {
   label: string;
   href: string;
   external?: boolean;
-  icon: string;
 }
 
 /**

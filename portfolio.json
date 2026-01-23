@@ -1,167 +1,174 @@
 {
   "personal": {
-    "name": "Alex Morgan",
-    "brandName": "Alex Morgan.",
-    "role": "Product Owner & Strategist",
-    "location": "San Francisco",
-    "experience": "5 Years",
-    "tagline": "I build products that make sense.",
-    "description": "Moving beyond feature factories. I help teams find clarity in chaos and ship software that actually solves human problems."
+    "name": "Vijay Wade",
+    "brandName": "Vijay Wade",
+    "role": "Founder & Agile Consultant",
+    "location": "India",
+    "experience": "20+ Years",
+    "tagline": "Helping teams build better products through Agile thinking.",
+    "description": "Founder and Agile practitioner focused on organizational agility, leadership, and product execution."
   },
   "seo": {
-    "title": "Alex Morgan - Product Owner & Strategist",
-    "description": "Product Owner & Strategist helping teams find clarity in chaos and ship software that actually solves human problems.",
-    "url": "https://alexmorgan.product",
+    "title": "Vijay Wade - Agile Coach & Founder",
+    "description": "Founder at AgileWaters Consulting and Recrui8. Agile coach and leadership mentor helping teams build better products.",
+    "url": "https://www.linkedin.com/in/vijaywade/",
     "keywords": [
-      "Product Owner",
-      "Product Manager",
-      "Strategist",
-      "UX Research",
-      "Agile",
-      "Product Strategy"
+      "Agile Coach",
+      "Agile Consultant",
+      "Leadership",
+      "Scrum",
+      "Product Management",
+      "Organizational Agility"
     ]
   },
   "contact": {
-    "email": "hello@alexmorgan.product",
-    "linkedin": "linkedin.com/in/alexmorgan",
-    "status": "Currently based in San Francisco. Open for remote Product Owner and Senior PM roles."
+    "email": "vijaywade@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/vijaywade/",
+    "status": "Currently based in India. Open for Agile Consulting and Senior PM roles."
   },
   "hero": {
-    "headline": "I build products",
-    "headlineItalic": "that make sense.",
-    "ctaText": "See Case Studies",
+    "headline": "Building teams",
+    "headlineItalic": "that deliver with clarity.",
+    "ctaText": "Explore Work",
     "ctaHref": "#work",
-    "image": "/images/hero-abstract.jpg"
+    "image": ""
   },
   "philosophy": {
     "title": "The Philosophy",
-    "subtitle": "Why I do this",
+    "subtitle": "How I work",
     "content": [
       {
-        "emphasis": "Data is useful, but intuition is vital.",
-        "paragraph": "In a world obsessed with metrics, we often forget the human on the other side of the screen. My work focuses on bridging that gap."
+        "emphasis": "Agility is about people, not processes.",
+        "paragraph": "I focus on enabling teams to think clearly, collaborate effectively, and deliver outcomes instead of just outputs."
       },
       {
         "emphasis": "",
-        "paragraph": "I don't just manage tickets in Jira. I manage alignment. I translate business ambiguity into engineering clarity. I believe that a \"Product Owner\" isn't just a backlog groomer—they are the custodian of the product's soul."
+        "paragraph": "My work bridges leadership, execution, and continuous improvement. I believe real transformation happens when clarity meets accountability."
       }
     ],
     "principles": [
       {
-        "title": "Discovery",
-        "subtitle": "Not just \"what\", but \"why\""
+        "title": "Agility",
+        "subtitle": "Adapt fast, learn faster"
       },
       {
-        "title": "Strategy",
-        "subtitle": "Outcome over output"
+        "title": "Leadership",
+        "subtitle": "Enable teams, don’t control them"
       },
       {
-        "title": "Agile",
-        "subtitle": "Flexible, not fragile"
+        "title": "Execution",
+        "subtitle": "Turn ideas into outcomes"
       },
       {
-        "title": "Empathy",
-        "subtitle": "User first, always"
+        "title": "Growth",
+        "subtitle": "Continuous improvement mindset"
       }
     ]
   },
   "projects": [
     {
-      "id": "saas-analytics",
-      "category": "SaaS Analytics",
-      "title": "Redefining Data Clarity",
-      "description": "We turned a clunky, spreadsheet-like interface into a narrative-driven dashboard. The result wasn't just prettier screens, but a 15% reduction in churn.",
-      "role": "Lead Product Owner",
-      "focus": "UX Research, Data Viz",
-      "outcome": "+$2M ARR attributed",
-      "link": "#",
-      "image": "/images/project-saas.jpg",
-      "type": "dashboard"
+      "id": "agile-transformation-enterprise",
+      "category": "Agile Transformation",
+      "title": "Enterprise Agile Transformation",
+      "description": "Led an end-to-end Agile transformation for a mid-to-large enterprise, aligning leadership, teams, and delivery practices.",
+      "role": "Agile Coach & Transformation Lead",
+      "focus": "Organizational agility, leadership alignment, Scrum & Kanban adoption",
+      "outcome": "Improved delivery predictability, faster release cycles, and stronger cross-team collaboration.",
+      "link": "",
+      "image": "",
+      "type": "Consulting"
     },
     {
-      "id": "ecommerce-mobile",
-      "category": "E-Commerce Mobile",
-      "title": "1-Click Checkout Initiative",
-      "description": "Friction is the enemy of conversion. By mapping the user journey and removing 4 unnecessary steps, we streamlined the mobile checkout flow completely.",
-      "role": "Product Manager",
-      "focus": "Mobile Optimization",
-      "outcome": "70% decrease in drop-off",
-      "link": "#",
-      "image": "/images/project-mobile.jpg",
-      "type": "mobile"
+      "id": "product-delivery-coaching",
+      "category": "Product Delivery",
+      "title": "Product Delivery & Execution Coaching",
+      "description": "Coached product managers and engineering teams to improve product discovery, prioritization, and execution.",
+      "role": "Agile Consultant",
+      "focus": "Product management, backlog refinement, outcome-driven delivery",
+      "outcome": "Clearer product roadmaps, reduced waste, and improved customer-focused outcomes.",
+      "link": "",
+      "image": "",
+      "type": "Coaching"
+    },
+    {
+      "id": "leadership-agile-mindset",
+      "category": "Leadership Development",
+      "title": "Agile Leadership Enablement",
+      "description": "Worked with senior leaders to build an Agile mindset focused on empowerment, accountability, and continuous improvement.",
+      "role": "Leadership Mentor",
+      "focus": "Agile leadership, team empowerment, decision-making clarity",
+      "outcome": "Leaders enabled teams instead of controlling them, resulting in higher engagement and ownership.",
+      "link": "",
+      "image": "",
+      "type": "Mentorship"
     }
   ],
   "tools": [
     {
-      "name": "Jira & Linear",
+      "name": "Scrum",
+      "category": "Agile Framework"
+    },
+    {
+      "name": "Kanban",
+      "category": "Agile Framework"
+    },
+    {
+      "name": "Jira",
       "category": "Project Management"
     },
     {
-      "name": "Figma",
-      "category": "Prototyping"
-    },
-    {
-      "name": "Mixpanel",
-      "category": "Analytics"
-    },
-    {
-      "name": "SQL",
-      "category": "Data Querying"
-    },
-    {
-      "name": "Notion",
+      "name": "Confluence",
       "category": "Documentation"
-    },
-    {
-      "name": "Miro",
-      "category": "Workshopping"
     }
   ],
   "experience": [
     {
-      "id": "techflow",
-      "role": "Senior Product Owner",
-      "time": "2023 — Present",
-      "company": "TechFlow Solutions",
-      "description": "Leading the core platform team. Shifted the company focus from feature-parity to innovation. Championed the new design system adoption which improved dev velocity by 30%.",
+      "id": "agilewaters",
+      "role": "Founder / CEO",
+      "time": "",
+      "company": "AgileWaters Consulting",
+      "description": "Leading Agile consulting, coaching teams and organizations on agile transformation, leadership, and delivery excellence.",
       "highlighted": true
     },
     {
-      "id": "nebula",
-      "role": "Product Manager",
-      "time": "2021 — 2023",
-      "company": "Nebula SaaS",
-      "description": "Owned the mobile roadmap. Launched the Android app from scratch. Implemented the first A/B testing framework in the company.",
+      "id": "recrui8",
+      "role": "Founder",
+      "time": "",
+      "company": "Recrui8",
+      "description": "Focused on structured hiring, talent assessment, and industry–academia collaboration.",
       "highlighted": false
     },
     {
-      "id": "vertex",
-      "role": "Business Analyst",
-      "time": "2019 — 2021",
-      "company": "Vertex Corp",
-      "description": "Bridged the gap between non-technical stakeholders and the engineering team. Wrote the specs for the internal CRM revamp.",
+      "id": "agile-coach-consultant",
+      "role": "Agile Coach / Consultant",
+      "time": "2014 - 2020",
+      "company": "Independent Consulting",
+      "description": "Worked with multiple organizations as an Agile Coach, enabling teams to adopt Agile practices, improve collaboration, and deliver value consistently. Coached Scrum Masters, Product Owners, and engineering teams while supporting leadership in building an Agile mindset.",
+      "highlighted": false
+    },
+    {
+      "id": "delivery-lead",
+      "role": "Delivery Lead / Scrum Master",
+      "time": "2010 - 2014",
+      "company": "Technology & Product Organizations",
+      "description": "Led cross-functional teams as a Delivery Lead and Scrum Master, facilitating Agile ceremonies, improving delivery predictability, and supporting teams in continuous improvement. Acted as a bridge between business stakeholders and engineering teams.",
       "highlighted": false
     }
   ],
   "social": [
     {
-      "label": "Resume",
-      "href": "#",
-      "external": false
-    },
-    {
-      "label": "Twitter",
-      "href": "#",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/vijaywade/",
       "external": true
     },
     {
-      "label": "Medium",
-      "href": "#",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/vijaywade/",
       "external": true
     }
   ],
   "footer": {
-    "copyrightYear": "2024",
-    "copyrightName": "Alex Morgan"
+    "copyrightYear": "2026",
+    "copyrightName": "Vijay Wade"
   }
 }
