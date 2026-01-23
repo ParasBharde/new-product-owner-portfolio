@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { Mail, MapPin, Github, Linkedin, Twitter, PenTool } from 'lucide-react';
-import { Reveal } from '@/components/ui/Reveal';
+import Link from "next/link";
+import { Mail, MapPin, Github, Linkedin, Twitter, PenTool } from "lucide-react";
+import { Reveal } from "@/components/ui/Reveal";
 import {
   CONTACT,
   FOOTER_LINKS,
   COPYRIGHT_YEAR,
   COPYRIGHT_NAME,
-} from '@/lib/constants';
+} from "@/lib/constants";
 
 // Icon mapping
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -78,12 +78,14 @@ export function Footer() {
 
           {/* Status and Availability */}
           <Reveal delay={100}>
-            <div className="flex flex-col justify-end h-full">
+            <div className="flex w-full  flex-col justify-end h-full">
               <div className="bg-stone-800/50 rounded-lg p-6 border border-stone-700">
                 <h3 className="text-white font-semibold mb-3 text-lg">
                   Current Status
                 </h3>
-                <p className="text-stone-400 leading-relaxed">{CONTACT.status}</p>
+                <p className="text-stone-400 leading-relaxed">
+                  {CONTACT.status}
+                </p>
               </div>
             </div>
           </Reveal>
@@ -93,7 +95,7 @@ export function Footer() {
         <div className="border-t border-stone-800 mb-12" />
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           {/* Social Links */}
           <Reveal delay={150}>
             <div className="flex items-center gap-4">
@@ -104,8 +106,8 @@ export function Footer() {
                   <Link
                     key={`${link.label}-${index}`}
                     href={link.href}
-                    target={link.external ? '_blank' : undefined}
-                    rel={link.external ? 'noopener noreferrer' : undefined}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                     className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-orange-600 hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-900"
                     aria-label={link.label}
                   >

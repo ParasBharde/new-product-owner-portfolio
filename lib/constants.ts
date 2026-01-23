@@ -6,8 +6,9 @@ import type {
   Principle,
   SocialLink,
   ContactInfo,
-} from './types';
-import portfolioData from '../portfolio.json';
+} from "./types";
+import portfolioData from "../portfolio.json";
+import Img from "../assests/Profile.jpg";
 
 /**
  * Brand name
@@ -26,19 +27,19 @@ export const SITE_KEYWORDS = portfolioData.seo.keywords;
  * Navigation links for header
  */
 export const NAV_LINKS: NavLink[] = [
-  { label: 'Philosophy', href: '#about' },
-  { label: 'Selected Work', href: '#work' },
-  { label: 'Process', href: '#process' },
+  { label: "Philosophy", href: "#about" },
+  { label: "Selected Work", href: "#work" },
+  { label: "Process", href: "#process" },
 ];
 
 /**
  * Mobile navigation links (includes Contact)
  */
 export const MOBILE_NAV_LINKS: NavLink[] = [
-  { label: 'Philosophy', href: '#about' },
-  { label: 'Selected Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'Contact', href: '#contact' },
+  { label: "Philosophy", href: "#about" },
+  { label: "Selected Work", href: "#work" },
+  { label: "Process", href: "#process" },
+  { label: "Contact", href: "#contact" },
 ];
 
 /**
@@ -52,7 +53,7 @@ export const HERO = {
   ctaText: portfolioData.hero.ctaText,
   ctaHref: portfolioData.hero.ctaHref,
   location: portfolioData.personal.location,
-  experience: portfolioData.personal.experience,
+  experience: portfolioData.personal.experience
 };
 
 /**
@@ -67,6 +68,8 @@ export const PHILOSOPHY = {
     paragraph: item.paragraph,
   })),
 };
+
+export const Profile_Img = Img;
 
 /**
  * Philosophy principles grid
