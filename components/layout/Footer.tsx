@@ -97,7 +97,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           {/* Social Links */}
-          <Reveal delay={150}>
+          {/* <Reveal delay={150}>
             <div className="flex items-center gap-4">
               <span className="text-stone-500 text-sm mr-2">Connect:</span>
               {FOOTER_LINKS.map((link, index) => {
@@ -116,7 +116,7 @@ export function Footer() {
                 );
               })}
             </div>
-          </Reveal>
+          </Reveal> */}
 
           {/* Copyright */}
           <Reveal delay={200}>
