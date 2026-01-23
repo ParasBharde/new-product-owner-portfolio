@@ -1,0 +1,167 @@
+{
+  "personal": {
+    "name": "Alex Morgan",
+    "brandName": "Alex Morgan.",
+    "role": "Product Owner & Strategist",
+    "location": "San Francisco",
+    "experience": "5 Years",
+    "tagline": "I build products that make sense.",
+    "description": "Moving beyond feature factories. I help teams find clarity in chaos and ship software that actually solves human problems."
+  },
+  "seo": {
+    "title": "Alex Morgan - Product Owner & Strategist",
+    "description": "Product Owner & Strategist helping teams find clarity in chaos and ship software that actually solves human problems.",
+    "url": "https://alexmorgan.product",
+    "keywords": [
+      "Product Owner",
+      "Product Manager",
+      "Strategist",
+      "UX Research",
+      "Agile",
+      "Product Strategy"
+    ]
+  },
+  "contact": {
+    "email": "hello@alexmorgan.product",
+    "linkedin": "linkedin.com/in/alexmorgan",
+    "status": "Currently based in San Francisco. Open for remote Product Owner and Senior PM roles."
+  },
+  "hero": {
+    "headline": "I build products",
+    "headlineItalic": "that make sense.",
+    "ctaText": "See Case Studies",
+    "ctaHref": "#work",
+    "image": "/images/hero-abstract.jpg"
+  },
+  "philosophy": {
+    "title": "The Philosophy",
+    "subtitle": "Why I do this",
+    "content": [
+      {
+        "emphasis": "Data is useful, but intuition is vital.",
+        "paragraph": "In a world obsessed with metrics, we often forget the human on the other side of the screen. My work focuses on bridging that gap."
+      },
+      {
+        "emphasis": "",
+        "paragraph": "I don't just manage tickets in Jira. I manage alignment. I translate business ambiguity into engineering clarity. I believe that a \"Product Owner\" isn't just a backlog groomer—they are the custodian of the product's soul."
+      }
+    ],
+    "principles": [
+      {
+        "title": "Discovery",
+        "subtitle": "Not just \"what\", but \"why\""
+      },
+      {
+        "title": "Strategy",
+        "subtitle": "Outcome over output"
+      },
+      {
+        "title": "Agile",
+        "subtitle": "Flexible, not fragile"
+      },
+      {
+        "title": "Empathy",
+        "subtitle": "User first, always"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "saas-analytics",
+      "category": "SaaS Analytics",
+      "title": "Redefining Data Clarity",
+      "description": "We turned a clunky, spreadsheet-like interface into a narrative-driven dashboard. The result wasn't just prettier screens, but a 15% reduction in churn.",
+      "role": "Lead Product Owner",
+      "focus": "UX Research, Data Viz",
+      "outcome": "+$2M ARR attributed",
+      "link": "#",
+      "image": "/images/project-saas.jpg",
+      "type": "dashboard"
+    },
+    {
+      "id": "ecommerce-mobile",
+      "category": "E-Commerce Mobile",
+      "title": "1-Click Checkout Initiative",
+      "description": "Friction is the enemy of conversion. By mapping the user journey and removing 4 unnecessary steps, we streamlined the mobile checkout flow completely.",
+      "role": "Product Manager",
+      "focus": "Mobile Optimization",
+      "outcome": "70% decrease in drop-off",
+      "link": "#",
+      "image": "/images/project-mobile.jpg",
+      "type": "mobile"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Jira & Linear",
+      "category": "Project Management"
+    },
+    {
+      "name": "Figma",
+      "category": "Prototyping"
+    },
+    {
+      "name": "Mixpanel",
+      "category": "Analytics"
+    },
+    {
+      "name": "SQL",
+      "category": "Data Querying"
+    },
+    {
+      "name": "Notion",
+      "category": "Documentation"
+    },
+    {
+      "name": "Miro",
+      "category": "Workshopping"
+    }
+  ],
+  "experience": [
+    {
+      "id": "techflow",
+      "role": "Senior Product Owner",
+      "time": "2023 — Present",
+      "company": "TechFlow Solutions",
+      "description": "Leading the core platform team. Shifted the company focus from feature-parity to innovation. Championed the new design system adoption which improved dev velocity by 30%.",
+      "highlighted": true
+    },
+    {
+      "id": "nebula",
+      "role": "Product Manager",
+      "time": "2021 — 2023",
+      "company": "Nebula SaaS",
+      "description": "Owned the mobile roadmap. Launched the Android app from scratch. Implemented the first A/B testing framework in the company.",
+      "highlighted": false
+    },
+    {
+      "id": "vertex",
+      "role": "Business Analyst",
+      "time": "2019 — 2021",
+      "company": "Vertex Corp",
+      "description": "Bridged the gap between non-technical stakeholders and the engineering team. Wrote the specs for the internal CRM revamp.",
+      "highlighted": false
+    }
+  ],
+  "social": [
+    {
+      "label": "Resume",
+      "href": "#",
+      "external": false
+    },
+    {
+      "label": "Twitter",
+      "href": "#",
+      "external": true
+    },
+    {
+      "label": "Medium",
+      "href": "#",
+      "external": true
+    }
+  ],
+  "footer": {
+    "copyrightYear": "2024",
+    "copyrightName": "Alex Morgan"
+  }
+}

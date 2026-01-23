@@ -1,0 +1,36 @@
+{
+  "name": "product-owner-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready Next.js portfolio for Product Owner",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:38258/git/ParasBharde/product-owner-portfolio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.23",
+    "lucide-react": "^0.562.0",
+    "next": "^16.1.4",
+    "postcss": "^8.5.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.4",
+    "typescript": "^5.9.3"
+  }
+}
