@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ArrowDownRight, ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
+import { AnimatedImage } from "@/components/ui/AnimatedImage";
 import { HERO, Profile_Img } from "@/lib/constants";
-import Image from "next/image";
 
 /**
  * Hero section - main landing area with headline and abstract visual
@@ -40,20 +40,15 @@ export function HeroSection() {
           </Reveal>
         </div>
 
-        {/* Abstract Image Block */}
+        {/* Animated Image Block with 3D effects */}
         <div className="hidden lg:block lg:col-span-4">
           <Reveal delay={200}>
-            <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden ">
-              <div className="absolute inset-0 flex items-center justify-center h-[85%] rounded-m">
-                <Image src={Profile_Img} alt="" fill className="object-cover" />
-              </div>
-              <div id="img" className="absolute bottom-6 left-6 right-6">
-                <div className="flex justify-between text-xs font-mono text-stone-500 uppercase">
-                  <span>Loc: {HERO.location}</span>
-                  <span>Exp: {HERO.experience}</span>
-                </div>
-              </div>
-            </div>
+            <AnimatedImage
+              src={Profile_Img}
+              alt="Profile"
+              location={HERO.location}
+              experience={HERO.experience}
+            />
           </Reveal>
         </div>
       </div>
