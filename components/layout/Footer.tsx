@@ -61,19 +61,19 @@ export function Footer() {
         <div className="mb-24 text-center">
           <ParallaxSection speed={0.3}>
             <Reveal>
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-orange-600/20 backdrop-blur-sm border border-orange-600/30 rounded-full">
-                <Sparkles className="w-4 h-4 text-orange-400" />
-                <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-orange-500/30 backdrop-blur-sm border border-orange-500/50 rounded-full shadow-lg">
+                <Sparkles className="w-4 h-4 text-orange-300" />
+                <span className="text-orange-300 font-mono text-xs uppercase tracking-widest font-semibold">
                   Let's Connect
                 </span>
               </div>
-              <h2 className="font-serif text-5xl md:text-7xl text-white mb-6 leading-tight">
+              <h2 className="font-serif text-5xl md:text-7xl text-white mb-6 leading-tight drop-shadow-lg">
                 Ready to create <br />
-                <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-purple-500 bg-clip-text text-transparent italic">
+                <span className="bg-gradient-to-r from-orange-300 via-orange-400 to-purple-400 bg-clip-text text-transparent italic">
                   something amazing?
                 </span>
               </h2>
-              <p className="text-xl text-slate-100 font-light max-w-2xl mx-auto mb-12">
+              <p className="text-xl text-slate-50 font-light max-w-2xl mx-auto mb-12 drop-shadow-md">
                 Let's turn your vision into reality. Reach out and let's discuss how we can work together.
               </p>
             </Reveal>
@@ -88,19 +88,19 @@ export function Footer() {
             <Reveal>
               <Link
                 href={`mailto:${CONTACT.email}`}
-                className="group relative bg-slate-800/60 backdrop-blur-md border border-slate-700/60 rounded-2xl p-8 hover:bg-slate-700/60 hover:border-orange-500/70 transition-all duration-300 overflow-hidden shadow-xl"
+                className="group relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 hover:bg-slate-700/80 hover:border-orange-500/80 transition-all duration-300 overflow-hidden shadow-2xl"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/30 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/40 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-orange-500/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <Mail className="w-7 h-7 text-orange-400" />
+                  <div className="w-14 h-14 bg-orange-500/40 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                    <Mail className="w-7 h-7 text-orange-300" />
                   </div>
-                  <h3 className="text-white font-semibold text-lg mb-2">Email Me</h3>
-                  <p className="text-slate-300 text-sm mb-4">Drop me a line anytime</p>
-                  <span className="text-orange-400 text-sm font-medium group-hover:underline">
+                  <h3 className="text-white font-bold text-lg mb-2">Email Me</h3>
+                  <p className="text-slate-200 text-sm mb-4 font-medium">Drop me a line anytime</p>
+                  <span className="text-orange-300 text-sm font-semibold group-hover:underline">
                     {CONTACT.email}
                   </span>
-                  <ArrowUpRight className="absolute top-6 right-6 w-5 h-5 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowUpRight className="absolute top-6 right-6 w-5 h-5 text-orange-300 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </Link>
             </Reveal>
@@ -111,34 +111,34 @@ export function Footer() {
                 href={`https://${CONTACT.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-slate-800/60 backdrop-blur-md border border-slate-700/60 rounded-2xl p-8 hover:bg-slate-700/60 hover:border-blue-500/70 transition-all duration-300 overflow-hidden shadow-xl"
+                className="group relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 hover:bg-slate-700/80 hover:border-blue-500/80 transition-all duration-300 overflow-hidden shadow-2xl"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/30 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/40 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-blue-500/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <Linkedin className="w-7 h-7 text-blue-400" />
+                  <div className="w-14 h-14 bg-blue-500/40 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                    <Linkedin className="w-7 h-7 text-blue-300" />
                   </div>
-                  <h3 className="text-white font-semibold text-lg mb-2">LinkedIn</h3>
-                  <p className="text-slate-300 text-sm mb-4">Let's connect professionally</p>
-                  <span className="text-blue-400 text-sm font-medium group-hover:underline">
+                  <h3 className="text-white font-bold text-lg mb-2">LinkedIn</h3>
+                  <p className="text-slate-200 text-sm mb-4 font-medium">Let's connect professionally</p>
+                  <span className="text-blue-300 text-sm font-semibold group-hover:underline">
                     View Profile
                   </span>
-                  <ArrowUpRight className="absolute top-6 right-6 w-5 h-5 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowUpRight className="absolute top-6 right-6 w-5 h-5 text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </Link>
             </Reveal>
 
             {/* Location Card */}
             <Reveal delay={200}>
-              <div className="relative bg-slate-800/60 backdrop-blur-md border border-slate-700/60 rounded-2xl p-8 overflow-hidden md:col-span-2 shadow-xl">
-                <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/30 rounded-full blur-2xl" />
+              <div className="relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 overflow-hidden md:col-span-2 shadow-2xl">
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/40 rounded-full blur-2xl" />
                 <div className="relative z-10 flex items-center gap-4">
-                  <div className="w-14 h-14 bg-purple-500/30 rounded-2xl flex items-center justify-center">
-                    <MapPin className="w-7 h-7 text-purple-400" />
+                  <div className="w-14 h-14 bg-purple-500/40 rounded-2xl flex items-center justify-center shadow-lg">
+                    <MapPin className="w-7 h-7 text-purple-300" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold text-lg mb-1">Based in</h3>
-                    <p className="text-slate-300">{CONTACT.location}</p>
+                    <h3 className="text-white font-bold text-lg mb-1">Based in</h3>
+                    <p className="text-slate-200 font-medium">{CONTACT.location}</p>
                   </div>
                 </div>
               </div>
@@ -149,14 +149,14 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-6">
             {/* Status Card */}
             <Reveal delay={150}>
-              <div className="relative bg-gradient-to-br from-orange-500/25 to-purple-500/25 backdrop-blur-md border border-orange-500/50 rounded-2xl p-8 overflow-hidden shadow-xl">
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-orange-500/40 rounded-full blur-2xl" />
+              <div className="relative bg-gradient-to-br from-orange-500/30 to-purple-500/30 backdrop-blur-md border border-orange-500/60 rounded-2xl p-8 overflow-hidden shadow-2xl">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-orange-500/50 rounded-full blur-2xl" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                    <h3 className="text-white font-semibold text-lg">Current Status</h3>
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/70" />
+                    <h3 className="text-white font-bold text-lg">Current Status</h3>
                   </div>
-                  <p className="text-slate-100 leading-relaxed">
+                  <p className="text-white leading-relaxed font-medium">
                     {CONTACT.status}
                   </p>
                 </div>
@@ -165,10 +165,10 @@ export function Footer() {
 
             {/* Newsletter Card */}
             <Reveal delay={200}>
-              <div className="relative bg-slate-800/60 backdrop-blur-md border border-slate-700/60 rounded-2xl p-8 overflow-hidden shadow-xl">
+              <div className="relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 overflow-hidden shadow-2xl">
                 <div className="relative z-10">
-                  <h3 className="text-white font-semibold text-lg mb-2">Stay Updated</h3>
-                  <p className="text-slate-300 text-sm mb-4">
+                  <h3 className="text-white font-bold text-lg mb-2">Stay Updated</h3>
+                  <p className="text-slate-200 text-sm mb-4 font-medium">
                     Get notified about new projects and insights
                   </p>
                   <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
@@ -177,11 +177,11 @@ export function Footer() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your@email.com"
-                      className="flex-1 bg-slate-700/50 border border-slate-600/60 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500/70 focus:bg-slate-700/70 transition-colors"
+                      className="flex-1 bg-slate-700/60 border border-slate-600/70 rounded-lg px-4 py-2 text-white placeholder-slate-300 focus:outline-none focus:border-orange-500/80 focus:bg-slate-700/80 transition-colors shadow-inner"
                     />
                     <button
                       type="submit"
-                      className="bg-orange-600 hover:bg-orange-500 text-white p-2 rounded-lg transition-colors shadow-lg hover:shadow-orange-500/50"
+                      className="bg-orange-600 hover:bg-orange-500 text-white p-2 rounded-lg transition-colors shadow-lg hover:shadow-orange-500/60"
                       aria-label="Subscribe"
                     >
                       <Send className="w-5 h-5" />
@@ -217,12 +217,12 @@ export function Footer() {
                     <div className={`absolute inset-0 bg-orange-500/40 rounded-full blur-xl transition-opacity duration-300 ${hoveredSocial === index ? 'opacity-100' : 'opacity-0'}`} />
 
                     {/* Icon container */}
-                    <div className="relative w-14 h-14 bg-slate-800/60 border border-slate-700/60 rounded-full flex items-center justify-center hover:bg-orange-600 hover:border-orange-600 hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg">
-                      <Icon className="w-6 h-6 text-slate-300 group-hover:text-white transition-colors" />
+                    <div className="relative w-14 h-14 bg-slate-800/80 border border-slate-600/70 rounded-full flex items-center justify-center hover:bg-orange-600 hover:border-orange-600 hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                      <Icon className="w-6 h-6 text-slate-200 group-hover:text-white transition-colors" />
                     </div>
 
                     {/* Label on hover */}
-                    <span className={`absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-slate-300 whitespace-nowrap transition-opacity duration-300 ${hoveredSocial === index ? 'opacity-100' : 'opacity-0'}`}>
+                    <span className={`absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-slate-200 whitespace-nowrap transition-opacity duration-300 font-semibold ${hoveredSocial === index ? 'opacity-100' : 'opacity-0'}`}>
                       {link.label}
                     </span>
                   </Link>
@@ -233,20 +233,20 @@ export function Footer() {
         </Reveal>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-700/50 pt-8">
+        <div className="border-t border-slate-600/60 pt-8">
           <Reveal delay={300}>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-slate-400 text-sm">
+              <p className="text-slate-300 text-sm font-medium">
                 &copy; {COPYRIGHT_YEAR} {COPYRIGHT_NAME}. Crafted with passion.
               </p>
               <div className="flex items-center gap-6 text-sm">
-                <Link href="#about" className="text-slate-400 hover:text-orange-400 transition-colors font-medium">
+                <Link href="#about" className="text-slate-300 hover:text-orange-400 transition-colors font-semibold">
                   About
                 </Link>
-                <Link href="#work" className="text-slate-400 hover:text-orange-400 transition-colors font-medium">
+                <Link href="#work" className="text-slate-300 hover:text-orange-400 transition-colors font-semibold">
                   Work
                 </Link>
-                <Link href="#process" className="text-slate-400 hover:text-orange-400 transition-colors font-medium">
+                <Link href="#process" className="text-slate-300 hover:text-orange-400 transition-colors font-semibold">
                   Process
                 </Link>
               </div>

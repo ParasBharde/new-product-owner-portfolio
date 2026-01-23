@@ -90,70 +90,97 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
       >
         {/* Backdrop glow effect */}
         <div
-          className="absolute -inset-4 bg-gradient-to-br from-orange-500/20 to-purple-500/20 blur-3xl opacity-0 transition-opacity duration-500"
+          className="absolute -inset-8 bg-gradient-to-br from-orange-500/30 to-purple-500/30 blur-3xl opacity-0 transition-opacity duration-500"
           style={{
-            opacity: isHovering ? 0.6 : 0,
+            opacity: isHovering ? 0.8 : 0.4,
             transform: 'translateZ(-50px)',
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
           }}
         />
 
-        {/* Main image container with layers */}
-        <div className="relative w-full h-full rounded-sm overflow-hidden shadow-2xl">
-          {/* Background layer - moves slower (parallax) */}
+        {/* Main image container with custom blob shape */}
+        <div
+          className="relative w-full h-full overflow-hidden shadow-2xl"
+          style={{
+            borderRadius: isHovering
+              ? '60% 40% 30% 70% / 60% 30% 70% 40%'
+              : '50% 50% 30% 70% / 50% 50% 70% 30%',
+            transition: 'border-radius 1s ease-in-out',
+          }}
+        >
+          {/* Animated gradient background */}
           <div
-            className="absolute inset-0 bg-gradient-to-br from-orange-100 to-purple-100"
+            className="absolute inset-0 bg-gradient-to-br from-orange-200 via-purple-200 to-pink-200 animate-gradient"
             style={{
               transform: `translateZ(-30px) scale(1.1) translateX(${-mousePosition.x * 5}px) translateY(${-mousePosition.y * 5}px)`,
             }}
           />
 
-          {/* Middle decorative layer */}
+          {/* Decorative rings */}
           <div
-            className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent"
+            className="absolute inset-0 opacity-20"
             style={{
               transform: `translateZ(-15px) translateX(${mousePosition.x * 10}px) translateY(${mousePosition.y * 10}px)`,
             }}
-          />
+          >
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 border-4 border-orange-400 rounded-full animate-spin-slow" />
+            <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-4 border-purple-400 rounded-full animate-spin-reverse" />
+          </div>
 
-          {/* Image layer */}
+          {/* Image layer with mask */}
           <div
             className="absolute inset-0 flex items-center justify-center h-[85%]"
             style={{
               transform: `translateZ(20px)`,
             }}
           >
-            <Image
-              src={src}
-              alt={alt}
-              fill
-              className="object-cover transition-all duration-500"
-              style={{
-                filter: isHovering ? 'brightness(1.1) contrast(1.05)' : 'brightness(1) contrast(1)',
-              }}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={src}
+                alt={alt}
+                fill
+                className="object-cover transition-all duration-500"
+                style={{
+                  filter: isHovering
+                    ? 'brightness(1.1) contrast(1.08) saturate(1.1)'
+                    : 'brightness(1) contrast(1) saturate(1)',
+                }}
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/20 via-transparent to-transparent" />
+            </div>
           </div>
 
           {/* Shine effect on hover */}
           <div
-            className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/0 to-transparent opacity-0 transition-opacity duration-500"
+            className="absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none"
             style={{
-              opacity: isHovering ? 0.3 : 0,
+              opacity: isHovering ? 0.4 : 0,
               transform: `translateX(${mousePosition.x * 50}%) translateY(${mousePosition.y * 50}%)`,
-              background: 'linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%)',
+              background: 'radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 70%)',
             }}
           />
 
-          {/* Info overlay with parallax */}
+          {/* Info overlay with modern design */}
           <div
             id="img"
-            className="absolute bottom-6 left-6 right-6 z-10"
+            className="absolute bottom-8 left-8 right-8 z-10"
             style={{
               transform: `translateZ(40px)`,
             }}
           >
-            <div className="flex justify-between text-xs font-mono text-stone-700 uppercase backdrop-blur-sm bg-white/50 p-3 rounded">
-              <span>Loc: {location}</span>
-              <span>Exp: {experience}</span>
+            <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-4 shadow-2xl">
+              <div className="flex justify-between items-center text-xs font-mono text-white uppercase tracking-wide">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
+                  <span className="font-bold">Location</span>
+                  <span className="text-white/80">{location}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">Experience</span>
+                  <span className="text-white/80">{experience}</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -161,7 +188,7 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
           {isHovering && (
             <>
               <div
-                className="absolute w-2 h-2 bg-orange-500 rounded-full opacity-60 blur-sm"
+                className="absolute w-3 h-3 bg-orange-400 rounded-full opacity-70 blur-sm shadow-lg shadow-orange-400/50"
                 style={{
                   top: '20%',
                   left: '30%',
@@ -170,7 +197,7 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
                 }}
               />
               <div
-                className="absolute w-3 h-3 bg-purple-500 rounded-full opacity-40 blur-sm"
+                className="absolute w-4 h-4 bg-purple-400 rounded-full opacity-50 blur-sm shadow-lg shadow-purple-400/50"
                 style={{
                   top: '60%',
                   right: '25%',
@@ -178,18 +205,74 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
                   animation: 'pulse 3s infinite',
                 }}
               />
+              <div
+                className="absolute w-2 h-2 bg-pink-400 rounded-full opacity-60 blur-sm shadow-lg shadow-pink-400/50"
+                style={{
+                  top: '40%',
+                  right: '40%',
+                  transform: `translateZ(65px) translateY(${Math.sin(floatOffset / 12) * 15}px)`,
+                  animation: 'pulse 2.5s infinite',
+                }}
+              />
             </>
           )}
         </div>
 
-        {/* 3D border frame effect */}
+        {/* 3D border frame with blob shape */}
         <div
-          className="absolute inset-0 border-2 border-white/20 rounded-sm pointer-events-none"
+          className="absolute inset-0 border-4 border-white/30 pointer-events-none"
           style={{
-            transform: 'translateZ(30px)',
+            transform: 'translateZ(35px)',
+            borderRadius: isHovering
+              ? '60% 40% 30% 70% / 60% 30% 70% 40%'
+              : '50% 50% 30% 70% / 50% 50% 70% 30%',
+            transition: 'border-radius 1s ease-in-out',
           }}
         />
       </div>
+
+      {/* Custom animations */}
+      <style jsx>{`
+        @keyframes gradient {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes spin-reverse {
+          from {
+            transform: rotate(360deg);
+          }
+          to {
+            transform: rotate(0deg);
+          }
+        }
+
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient 8s ease infinite;
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+
+        .animate-spin-reverse {
+          animation: spin-reverse 15s linear infinite;
+        }
+      `}</style>
     </div>
   );
 }

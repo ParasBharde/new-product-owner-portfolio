@@ -69,3 +69,15 @@ export interface ContactInfo {
   location: string;
   status: string;
 }
+
+/**
+ * Recommendation/Testimonial structure
+ */
+export interface Recommendation {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatar?: string;
+}
