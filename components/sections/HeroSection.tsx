@@ -17,11 +17,11 @@ export function HeroSection() {
             <p className="text-orange-600 font-medium tracking-wide text-sm mb-6 uppercase">
               {HERO.tagline}
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-5xl font-medium leading-[1.1] mb-8 text-stone-900 font-serif">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.1] mb-8 text-stone-900 font-serif">
               {HERO.headline} <br />
               <span className="italic font-light">{HERO.headlineItalic}</span>
             </h1>
-            <p className="text-xl md:text-xl text-stone-600 font-light leading-relaxed max-w-2xl mb-12">
+            <p className="text-xl md:text-2xl text-stone-600 font-light leading-relaxed max-w-2xl mb-12">
               {HERO.description}
             </p>
 

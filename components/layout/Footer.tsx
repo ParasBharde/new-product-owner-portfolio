@@ -23,7 +23,7 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-stone-900 text-stone-300 py-24 px-6 lg:px-12 relative overflow-hidden"
+      className="bg-stone-900 text-stone-300 py-20 px-6 lg:px-12 relative overflow-hidden"
     >
       {/* Decorative background elements */}
       <div
@@ -92,10 +92,10 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-stone-800 mb-12" />
+        <div className="border-t border-stone-800 mb-8" />
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+        {/* <div className="flex flex-col md:flex-row justify-center items-center gap-8"> */}
           {/* Social Links */}
           {/* <Reveal delay={150}>
             <div className="flex items-center gap-4">
@@ -120,12 +120,12 @@ export function Footer() {
 
           {/* Copyright */}
           <Reveal delay={200}>
-            <p className="text-stone-600 text-sm">
+            <p className="text-stone-600 text-sm text-center">
               &copy; {COPYRIGHT_YEAR} {COPYRIGHT_NAME}. All rights reserved.
             </p>
           </Reveal>
         </div>
-      </div>
+      {/* </div> */}
     </footer>
   );
 }
