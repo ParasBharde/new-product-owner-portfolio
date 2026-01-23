@@ -67,16 +67,40 @@
   },
   "projects": [
     {
-      "id": "",
-      "category": "",
-      "title": "",
-      "description": "",
-      "role": "",
-      "focus": "",
-      "outcome": "",
+      "id": "agile-transformation-enterprise",
+      "category": "Agile Transformation",
+      "title": "Enterprise Agile Transformation",
+      "description": "Led an end-to-end Agile transformation for a mid-to-large enterprise, aligning leadership, teams, and delivery practices.",
+      "role": "Agile Coach & Transformation Lead",
+      "focus": "Organizational agility, leadership alignment, Scrum & Kanban adoption",
+      "outcome": "Improved delivery predictability, faster release cycles, and stronger cross-team collaboration.",
       "link": "",
       "image": "",
-      "type": ""
+      "type": "Consulting"
+    },
+    {
+      "id": "product-delivery-coaching",
+      "category": "Product Delivery",
+      "title": "Product Delivery & Execution Coaching",
+      "description": "Coached product managers and engineering teams to improve product discovery, prioritization, and execution.",
+      "role": "Agile Consultant",
+      "focus": "Product management, backlog refinement, outcome-driven delivery",
+      "outcome": "Clearer product roadmaps, reduced waste, and improved customer-focused outcomes.",
+      "link": "",
+      "image": "",
+      "type": "Coaching"
+    },
+    {
+      "id": "leadership-agile-mindset",
+      "category": "Leadership Development",
+      "title": "Agile Leadership Enablement",
+      "description": "Worked with senior leaders to build an Agile mindset focused on empowerment, accountability, and continuous improvement.",
+      "role": "Leadership Mentor",
+      "focus": "Agile leadership, team empowerment, decision-making clarity",
+      "outcome": "Leaders enabled teams instead of controlling them, resulting in higher engagement and ownership.",
+      "link": "",
+      "image": "",
+      "type": "Mentorship"
     }
   ],
   "tools": [
@@ -112,6 +136,22 @@
       "time": "",
       "company": "Recrui8",
       "description": "Focused on structured hiring, talent assessment, and industry–academia collaboration.",
+      "highlighted": false
+    },
+    {
+      "id": "agile-coach-consultant",
+      "role": "Agile Coach / Consultant",
+      "time": "2014 - 2020",
+      "company": "Independent Consulting",
+      "description": "Worked with multiple organizations as an Agile Coach, enabling teams to adopt Agile practices, improve collaboration, and deliver value consistently. Coached Scrum Masters, Product Owners, and engineering teams while supporting leadership in building an Agile mindset.",
+      "highlighted": false
+    },
+    {
+      "id": "delivery-lead",
+      "role": "Delivery Lead / Scrum Master",
+      "time": "2010 - 2014",
+      "company": "Technology & Product Organizations",
+      "description": "Led cross-functional teams as a Delivery Lead and Scrum Master, facilitating Agile ceremonies, improving delivery predictability, and supporting teams in continuous improvement. Acted as a bridge between business stakeholders and engineering teams.",
       "highlighted": false
     }
   ],
