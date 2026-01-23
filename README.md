@@ -39,7 +39,7 @@ A modern, production-ready portfolio template built with Next.js 16, TypeScript,
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/product-owner-portfolio.git
+   git clone https://github.com/Recrui8/vijay-wade-portfolio.git
    cd product-owner-portfolio
    ```
 
