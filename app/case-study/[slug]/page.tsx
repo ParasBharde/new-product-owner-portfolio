@@ -315,5 +315,5 @@ export default function CaseStudyPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

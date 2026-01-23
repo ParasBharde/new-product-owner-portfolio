@@ -3,6 +3,7 @@ import { AboutSection } from '@/components/sections/AboutSection';
 import { WorkSection } from '@/components/sections/WorkSection';
 import { ToolkitSection } from '@/components/sections/ToolkitSection';
 import { ExperienceSection } from '@/components/sections/ExperienceSection';
+import { RecommendationsSection } from '@/components/sections/RecommendationsSection';
 import { Footer } from '@/components/layout/Footer';
 
 /**
@@ -16,6 +17,7 @@ export default function HomePage() {
       <WorkSection />
       <ToolkitSection />
       <ExperienceSection />
+      <RecommendationsSection />
       <Footer />
     </>
   );
