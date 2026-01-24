@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { Reveal } from '@/components/ui/Reveal';
-import { RECOMMENDATIONS } from '@/lib/constants';
-import { Quote } from 'lucide-react';
+import { Reveal } from "@/components/ui/Reveal";
+import { RECOMMENDATIONS } from "@/lib/constants";
+import { Quote } from "lucide-react";
 
 /**
  * Recommendations Section with infinite scroll animation
@@ -13,7 +13,10 @@ export function RecommendationsSection() {
   const duplicatedRecommendations = [...RECOMMENDATIONS, ...RECOMMENDATIONS];
 
   return (
-    <section id="recommendations" className="py-24 px-6 lg:px-12 bg-gradient-to-b from-stone-50 to-stone-100 overflow-hidden">
+    <section
+      id="recommendations"
+      className="py-24 px-6 lg:px-12 bg-gradient-to-b from-stone-50 to-stone-100 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto mb-16">
         <Reveal>
           <div className="text-center">
@@ -21,7 +24,8 @@ export function RecommendationsSection() {
               What People Say
             </h2>
             <p className="text-stone-600 text-lg max-w-2xl mx-auto">
-              Testimonials from colleagues, clients, and partners who've experienced the impact firsthand.
+              Testimonials from colleagues, clients, and partners who've
+              experienced the impact firsthand.
             </p>
           </div>
         </Reveal>
@@ -30,8 +34,6 @@ export function RecommendationsSection() {
       {/* Scrolling Container */}
       <div className="relative">
         {/* Gradient overlays for fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-stone-100 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-stone-100 to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling track */}
         <div className="flex gap-6 animate-scroll-left hover:pause-animation">
