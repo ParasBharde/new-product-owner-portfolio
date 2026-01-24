@@ -1,7 +1,17 @@
-'use client';
+"use client";
 
 import Link from "next/link";
-import { Mail, MapPin, Github, Linkedin, Twitter, PenTool, ArrowUpRight, Send, Sparkles } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Github,
+  Linkedin,
+  Twitter,
+  PenTool,
+  ArrowUpRight,
+  Send,
+  Sparkles,
+} from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { ParallaxSection } from "@/components/ui/ParallaxSection";
 import {
@@ -13,13 +23,16 @@ import {
 import { useState } from "react";
 
 // Icon mapping by label
-const iconByLabel: Record<string, React.ComponentType<{ className?: string }>> = {
-  'LinkedIn': Linkedin,
-  'Github': Github,
-  'GitHub': Github,
-  'Twitter': Twitter,
-  'Medium': PenTool,
-  'Blog': PenTool,
+const iconByLabel: Record<
+  string,
+  React.ComponentType<{ className?: string }>
+> = {
+  LinkedIn: Linkedin,
+  Github: Github,
+  GitHub: Github,
+  Twitter: Twitter,
+  Medium: PenTool,
+  Blog: PenTool,
 };
 
 /**
@@ -44,7 +57,10 @@ export function Footer() {
       {/* Animated gradient background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/15 to-emerald-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/15 to-emerald-500/15 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
       </div>
 
       {/* Grid pattern overlay */}
@@ -52,7 +68,7 @@ export function Footer() {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
+          backgroundSize: "50px 50px",
         }}
       />
 
@@ -74,7 +90,8 @@ export function Footer() {
                 </span>
               </h2>
               <p className="text-xl text-slate-50 font-light max-w-2xl mx-auto mb-12 drop-shadow-md">
-                Let's turn your vision into reality. Reach out and let's discuss how we can work together.
+                Let's turn your vision into reality. Reach out and let's discuss
+                how we can work together.
               </p>
             </Reveal>
           </ParallaxSection>
@@ -88,15 +105,19 @@ export function Footer() {
             <Reveal>
               <Link
                 href={`mailto:${CONTACT.email}`}
-                className="group relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 hover:bg-slate-700/80 hover:border-orange-500/80 transition-all duration-300 overflow-hidden shadow-2xl"
+                className=" block group relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 hover:bg-slate-700/80 hover:border-orange-500/80 transition-all duration-300 overflow-hidden shadow-2xl"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/40 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-orange-500/40 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                     <Mail className="w-7 h-7 text-orange-300" />
                   </div>
-                  <h3 className="text-white font-bold text-lg mb-2">Email Me</h3>
-                  <p className="text-slate-200 text-sm mb-4 font-medium">Drop me a line anytime</p>
+                  <h3 className="text-white font-bold text-lg mb-2">
+                    Email Me
+                  </h3>
+                  <p className="text-slate-200 text-sm mb-4 font-medium">
+                    Drop me a line anytime
+                  </p>
                   <span className="text-orange-300 text-sm font-semibold group-hover:underline">
                     {CONTACT.email}
                   </span>
@@ -111,15 +132,19 @@ export function Footer() {
                 href={`https://${CONTACT.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 hover:bg-slate-700/80 hover:border-blue-500/80 transition-all duration-300 overflow-hidden shadow-2xl"
+                className="block group relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 hover:bg-slate-700/80 hover:border-blue-500/80 transition-all duration-300 overflow-hidden shadow-2xl"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/40 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-blue-500/40 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                     <Linkedin className="w-7 h-7 text-blue-300" />
                   </div>
-                  <h3 className="text-white font-bold text-lg mb-2">LinkedIn</h3>
-                  <p className="text-slate-200 text-sm mb-4 font-medium">Let's connect professionally</p>
+                  <h3 className="text-white font-bold text-lg mb-2">
+                    LinkedIn
+                  </h3>
+                  <p className="text-slate-200 text-sm mb-4 font-medium">
+                    Let's connect professionally
+                  </p>
                   <span className="text-blue-300 text-sm font-semibold group-hover:underline">
                     View Profile
                   </span>
@@ -129,16 +154,20 @@ export function Footer() {
             </Reveal>
 
             {/* Location Card */}
-            <Reveal delay={200}>
-              <div className="relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 overflow-hidden md:col-span-2 shadow-2xl">
+            <Reveal delay={200} className="md:col-span-2">
+              <div className="relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 overflow-hidden shadow-2xl">
                 <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/40 rounded-full blur-2xl" />
                 <div className="relative z-10 flex items-center gap-4">
                   <div className="w-14 h-14 bg-purple-500/40 rounded-2xl flex items-center justify-center shadow-lg">
                     <MapPin className="w-7 h-7 text-purple-300" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg mb-1">Based in</h3>
-                    <p className="text-slate-200 font-medium">{CONTACT.location}</p>
+                    <h3 className="text-white font-bold text-lg mb-1">
+                      Based in
+                    </h3>
+                    <p className="text-slate-200 font-medium">
+                      {CONTACT.location}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -154,7 +183,9 @@ export function Footer() {
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/70" />
-                    <h3 className="text-white font-bold text-lg">Current Status</h3>
+                    <h3 className="text-white font-bold text-lg">
+                      Current Status
+                    </h3>
                   </div>
                   <p className="text-white leading-relaxed font-medium">
                     {CONTACT.status}
@@ -167,11 +198,16 @@ export function Footer() {
             <Reveal delay={200}>
               <div className="relative bg-slate-800/80 backdrop-blur-md border border-slate-600/70 rounded-2xl p-8 overflow-hidden shadow-2xl">
                 <div className="relative z-10">
-                  <h3 className="text-white font-bold text-lg mb-2">Stay Updated</h3>
+                  <h3 className="text-white font-bold text-lg mb-2">
+                    Stay Updated
+                  </h3>
                   <p className="text-slate-200 text-sm mb-4 font-medium">
                     Get notified about new projects and insights
                   </p>
-                  <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+                  <form
+                    onSubmit={handleNewsletterSubmit}
+                    className="flex gap-2"
+                  >
                     <input
                       type="email"
                       value={email}
@@ -214,7 +250,9 @@ export function Footer() {
                     aria-label={link.label}
                   >
                     {/* Glow effect */}
-                    <div className={`absolute inset-0 bg-orange-500/40 rounded-full blur-xl transition-opacity duration-300 ${hoveredSocial === index ? 'opacity-100' : 'opacity-0'}`} />
+                    <div
+                      className={`absolute inset-0 bg-orange-500/40 rounded-full blur-xl transition-opacity duration-300 ${hoveredSocial === index ? "opacity-100" : "opacity-0"}`}
+                    />
 
                     {/* Icon container */}
                     <div className="relative w-14 h-14 bg-slate-800/80 border border-slate-600/70 rounded-full flex items-center justify-center hover:bg-orange-600 hover:border-orange-600 hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-xl">
@@ -222,7 +260,9 @@ export function Footer() {
                     </div>
 
                     {/* Label on hover */}
-                    <span className={`absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-slate-200 whitespace-nowrap transition-opacity duration-300 font-semibold ${hoveredSocial === index ? 'opacity-100' : 'opacity-0'}`}>
+                    <span
+                      className={`absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-slate-200 whitespace-nowrap transition-opacity duration-300 font-semibold ${hoveredSocial === index ? "opacity-100" : "opacity-0"}`}
+                    >
                       {link.label}
                     </span>
                   </Link>
@@ -240,13 +280,22 @@ export function Footer() {
                 &copy; {COPYRIGHT_YEAR} {COPYRIGHT_NAME}. Crafted with passion.
               </p>
               <div className="flex items-center gap-6 text-sm">
-                <Link href="#about" className="text-slate-300 hover:text-orange-400 transition-colors font-semibold">
+                <Link
+                  href="#about"
+                  className="text-slate-300 hover:text-orange-400 transition-colors font-semibold"
+                >
                   About
                 </Link>
-                <Link href="#work" className="text-slate-300 hover:text-orange-400 transition-colors font-semibold">
+                <Link
+                  href="#work"
+                  className="text-slate-300 hover:text-orange-400 transition-colors font-semibold"
+                >
                   Work
                 </Link>
-                <Link href="#process" className="text-slate-300 hover:text-orange-400 transition-colors font-semibold">
+                <Link
+                  href="#process"
+                  className="text-slate-300 hover:text-orange-400 transition-colors font-semibold"
+                >
                   Process
                 </Link>
               </div>
