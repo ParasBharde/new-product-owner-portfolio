@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
-import { ParallaxSection } from '@/components/ui/ParallaxSection';
-import { PROJECTS } from '@/lib/constants';
-import { useEffect, useState } from 'react';
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ParallaxSection } from "@/components/ui/ParallaxSection";
+import { PROJECTS } from "@/lib/constants";
+import { useEffect, useState } from "react";
 
 /**
  * Case Study Detail Page with Parallax Effect
@@ -27,8 +27,8 @@ export default function CaseStudyPage() {
       setScrollY(window.scrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!project) {
@@ -63,7 +63,8 @@ export default function CaseStudyPage() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)',
+            background:
+              "radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)",
             transform: `translateY(${scrollY * 0.3}px)`,
           }}
         />
@@ -71,7 +72,8 @@ export default function CaseStudyPage() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)',
+            background:
+              "radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)",
             transform: `translateY(${scrollY * 0.4}px)`,
           }}
         />
@@ -86,14 +88,16 @@ export default function CaseStudyPage() {
         >
           <div
             className={`max-w-5xl mx-auto text-center transition-all duration-1000 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              isLoaded
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-20"
             }`}
           >
             {/* Category badge */}
             <div
               className="inline-block mb-6 px-4 py-2 bg-orange-600/20 backdrop-blur-sm border border-orange-600/30 rounded-full transition-all duration-700 delay-200"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(20px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -106,7 +110,7 @@ export default function CaseStudyPage() {
             <h1
               className="font-serif text-6xl md:text-8xl text-white mb-8 leading-tight transition-all duration-1000 delay-300"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(30px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -117,7 +121,7 @@ export default function CaseStudyPage() {
             <p
               className="text-xl md:text-2xl text-stone-300 font-light max-w-3xl mx-auto mb-12 transition-all duration-1000 delay-500"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(30px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -128,7 +132,7 @@ export default function CaseStudyPage() {
             <div
               className="flex flex-wrap justify-center gap-8 text-stone-400 font-mono text-sm transition-all duration-1000 delay-700"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(30px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -147,22 +151,24 @@ export default function CaseStudyPage() {
           className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60"
           style={{ opacity: heroOpacity }}
         >
-          <span className="text-xs font-mono uppercase tracking-wider">Scroll to explore</span>
+          <span className="text-xs font-mono uppercase tracking-wider">
+            Scroll to explore
+          </span>
           <div className="w-px h-16 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
         </div>
 
         {/* Back button */}
-        <Link
+        {/* <Link
           href="/#work"
           className="absolute top-8 left-8 flex items-center gap-2 text-white/80 hover:text-white transition-colors z-20 group"
         >
           <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
           <span className="font-medium">Back to Work</span>
-        </Link>
+        </Link> */}
       </section>
 
       {/* Content Section with Parallax Layers */}
-      <section className="relative bg-white">
+      <section id="overview" className="relative bg-white">
         {/* Overview Section */}
         <div className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto">
           <ParallaxSection speed={0.3}>
@@ -184,7 +190,9 @@ export default function CaseStudyPage() {
                     <p className="text-stone-600">{project.focus}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-stone-900 mb-1">Outcome</h4>
+                    <h4 className="font-semibold text-stone-900 mb-1">
+                      Outcome
+                    </h4>
                     <p className="text-stone-600">{project.outcome}</p>
                   </div>
                 </div>
@@ -194,7 +202,7 @@ export default function CaseStudyPage() {
                 <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="text-7xl font-serif text-stone-800 mb-4">
-                      {project.outcome.match(/\d+/)?.[0] || '100'}%
+                      {project.outcome.match(/\d+/)?.[0] || "100"}%
                     </div>
                     <p className="text-stone-600 font-medium">Success Rate</p>
                   </div>
@@ -205,42 +213,61 @@ export default function CaseStudyPage() {
         </div>
 
         {/* Challenge Section */}
-        <div className="relative py-24 px-6 lg:px-12 bg-stone-50">
+        <div
+          id="challenges"
+          className="relative py-24 px-6 lg:px-12 bg-stone-50"
+        >
           <div className="max-w-6xl mx-auto">
             <ParallaxSection speed={0.2}>
               <h2 className="font-serif text-5xl text-stone-900 mb-12">
                 The Challenge
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {['User Research', 'Design Strategy', 'Implementation'].map((item, index) => (
-                  <ParallaxSection
-                    key={item}
-                    speed={0.3 + index * 0.1}
-                    className="bg-white p-8 rounded-lg shadow-lg"
-                  >
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                      <span className="text-orange-600 font-bold text-xl">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-stone-900 mb-3">{item}</h3>
-                    <p className="text-stone-600">
-                      Detailed analysis and strategic approach to solving complex user
-                      experience challenges through data-driven decisions.
-                    </p>
-                  </ParallaxSection>
-                ))}
+                {["User Research", "Design Strategy", "Implementation"].map(
+                  (item, index) => (
+                    <ParallaxSection
+                      key={item}
+                      speed={0.3 + index * 0.1}
+                      className="bg-white p-8 rounded-lg shadow-lg"
+                    >
+                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <span className="text-orange-600 font-bold text-xl">
+                          {index + 1}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-stone-900 mb-3">
+                        {item}
+                      </h3>
+                      <p className="text-stone-600">
+                        Detailed analysis and strategic approach to solving
+                        complex user experience challenges through data-driven
+                        decisions.
+                      </p>
+                    </ParallaxSection>
+                  ),
+                )}
               </div>
             </ParallaxSection>
           </div>
         </div>
 
         {/* Solution Section with floating elements */}
-        <div className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto overflow-hidden">
+        <div
+          id="solution"
+          className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto overflow-hidden"
+        >
           {/* Floating background shapes */}
-          <ParallaxSection speed={0.8} className="absolute top-0 right-0 w-96 h-96 -mr-48">
+          <ParallaxSection
+            speed={0.8}
+            className="absolute top-0 right-0 w-96 h-96 -mr-48"
+          >
             <div className="w-full h-full bg-gradient-to-br from-orange-200 to-purple-200 rounded-full blur-3xl opacity-30" />
           </ParallaxSection>
 
-          <ParallaxSection speed={0.6} className="absolute bottom-0 left-0 w-64 h-64 -ml-32">
+          <ParallaxSection
+            speed={0.6}
+            className="absolute bottom-0 left-0 w-64 h-64 -ml-32"
+          >
             <div className="w-full h-full bg-gradient-to-tr from-blue-200 to-green-200 rounded-full blur-3xl opacity-30" />
           </ParallaxSection>
 
@@ -250,9 +277,9 @@ export default function CaseStudyPage() {
                 The Solution
               </h2>
               <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-16">
-                A comprehensive approach combining user research, iterative design, and
-                data-driven decision making to create an intuitive experience that exceeded
-                business goals.
+                A comprehensive approach combining user research, iterative
+                design, and data-driven decision making to create an intuitive
+                experience that exceeded business goals.
               </p>
             </ParallaxSection>
 
@@ -297,7 +324,10 @@ export default function CaseStudyPage() {
         </div>
 
         {/* Next Project Teaser */}
-        <div className="relative py-24 px-6 lg:px-12 bg-stone-900 text-white">
+        <div
+          id="contact"
+          className="relative py-24 px-6 lg:px-12 bg-stone-900 text-white"
+        >
           <div className="max-w-6xl mx-auto text-center">
             <ParallaxSection speed={0.2}>
               <h3 className="text-stone-400 font-mono text-sm uppercase tracking-widest mb-4">
@@ -315,5 +345,5 @@ export default function CaseStudyPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
