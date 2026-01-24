@@ -56,7 +56,7 @@ export default function CaseStudyPage() {
   const heroScale = Math.max(1 - scrollY / 3000, 0.85);
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen ">
       {/* Parallax Hero Section */}
       <section className="relative h-screen overflow-hidden bg-gradient-to-br from-stone-900 via-stone-800 to-orange-900">
         {/* Animated background layers */}
@@ -174,7 +174,7 @@ export default function CaseStudyPage() {
       </section>
 
       {/* Content Section with Parallax Layers */}
-      <section id="overview" className="relative bg-white">
+      <section id="overview" className="relative ">
         {/* Overview Section */}
         <div className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -217,7 +217,7 @@ export default function CaseStudyPage() {
         {/* Challenge Section */}
         <div
           id="challenges"
-          className="relative py-24 px-6 lg:px-12 bg-stone-50"
+          className="relative py-24 px-6 lg:px-12 bg-gradient-to-b from-stone-50 to-stone-100"
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="font-serif text-5xl text-stone-900 mb-12">
