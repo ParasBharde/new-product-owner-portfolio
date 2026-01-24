@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useRef, useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 interface AnimatedImageProps {
   src: any;
@@ -14,7 +14,12 @@ interface AnimatedImageProps {
  * Animated Image with 3D tilt, magnetic hover, and floating effect
  * New generation animation for hero section
  */
-export function AnimatedImage({ src, alt, location, experience }: AnimatedImageProps) {
+export function AnimatedImage({
+  src,
+  alt,
+  location,
+  experience,
+}: AnimatedImageProps) {
   const imageRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -73,7 +78,7 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
       className="relative w-full aspect-[3/4] perspective-1000"
-      style={{ perspective: '1000px' }}
+      style={{ perspective: "1000px" }}
     >
       <div
         className="relative w-full h-full transition-all duration-500 ease-out"
@@ -85,7 +90,7 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
             rotateY(${rotateY}deg)
             scale(${scale})
           `,
-          transformStyle: 'preserve-3d',
+          transformStyle: "preserve-3d",
         }}
       >
         {/* Backdrop glow effect */}
@@ -93,8 +98,8 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
           className="absolute -inset-8 bg-gradient-to-br from-orange-500/30 to-purple-500/30 blur-3xl opacity-0 transition-opacity duration-500"
           style={{
             opacity: isHovering ? 0.8 : 0.4,
-            transform: 'translateZ(-50px)',
-            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+            transform: "translateZ(-50px)",
+            borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
           }}
         />
 
@@ -103,9 +108,9 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
           className="relative w-full h-full overflow-hidden shadow-2xl"
           style={{
             borderRadius: isHovering
-              ? '60% 40% 30% 70% / 60% 30% 70% 40%'
-              : '50% 50% 30% 70% / 50% 50% 70% 30%',
-            transition: 'border-radius 1s ease-in-out',
+              ? "60% 40% 30% 70% / 60% 30% 70% 40%"
+              : "50% 50% 30% 70% / 50% 50% 70% 30%",
+            transition: "border-radius 1s ease-in-out",
           }}
         >
           {/* Animated gradient background */}
@@ -142,8 +147,8 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
                 className="object-cover transition-all duration-500"
                 style={{
                   filter: isHovering
-                    ? 'brightness(1.1) contrast(1.08) saturate(1.1)'
-                    : 'brightness(1) contrast(1) saturate(1)',
+                    ? "brightness(1.1) contrast(1.08) saturate(1.1)"
+                    : "brightness(1) contrast(1) saturate(1)",
                 }}
               />
               {/* Gradient overlay */}
@@ -157,7 +162,8 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
             style={{
               opacity: isHovering ? 0.4 : 0,
               transform: `translateX(${mousePosition.x * 50}%) translateY(${mousePosition.y * 50}%)`,
-              background: 'radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 70%)',
+              background:
+                "radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 70%)",
             }}
           />
 
@@ -190,28 +196,28 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
               <div
                 className="absolute w-3 h-3 bg-orange-400 rounded-full opacity-70 blur-sm shadow-lg shadow-orange-400/50"
                 style={{
-                  top: '20%',
-                  left: '30%',
+                  top: "20%",
+                  left: "30%",
                   transform: `translateZ(60px) translateY(${Math.sin(floatOffset / 10) * 20}px)`,
-                  animation: 'pulse 2s infinite',
+                  animation: "pulse 2s infinite",
                 }}
               />
               <div
                 className="absolute w-4 h-4 bg-purple-400 rounded-full opacity-50 blur-sm shadow-lg shadow-purple-400/50"
                 style={{
-                  top: '60%',
-                  right: '25%',
+                  top: "60%",
+                  right: "25%",
                   transform: `translateZ(70px) translateY(${Math.cos(floatOffset / 8) * 25}px)`,
-                  animation: 'pulse 3s infinite',
+                  animation: "pulse 3s infinite",
                 }}
               />
               <div
                 className="absolute w-2 h-2 bg-pink-400 rounded-full opacity-60 blur-sm shadow-lg shadow-pink-400/50"
                 style={{
-                  top: '40%',
-                  right: '40%',
+                  top: "40%",
+                  right: "40%",
                   transform: `translateZ(65px) translateY(${Math.sin(floatOffset / 12) * 15}px)`,
-                  animation: 'pulse 2.5s infinite',
+                  animation: "pulse 2.5s infinite",
                 }}
               />
             </>
@@ -222,11 +228,11 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
         <div
           className="absolute inset-0 border-4 border-white/30 pointer-events-none"
           style={{
-            transform: 'translateZ(35px)',
+            transform: "translateZ(35px)",
             borderRadius: isHovering
-              ? '60% 40% 30% 70% / 60% 30% 70% 40%'
-              : '50% 50% 30% 70% / 50% 50% 70% 30%',
-            transition: 'border-radius 1s ease-in-out',
+              ? "60% 40% 30% 70% / 60% 30% 70% 40%"
+              : "50% 50% 30% 70% / 50% 50% 70% 30%",
+            transition: "border-radius 1s ease-in-out",
           }}
         />
       </div>
@@ -234,7 +240,8 @@ export function AnimatedImage({ src, alt, location, experience }: AnimatedImageP
       {/* Custom animations */}
       <style jsx>{`
         @keyframes gradient {
-          0%, 100% {
+          0%,
+          100% {
             background-position: 0% 50%;
           }
           50% {

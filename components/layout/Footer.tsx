@@ -276,10 +276,10 @@ export function Footer() {
         <div className="border-t border-slate-600/60 pt-8">
           <Reveal delay={300}>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-slate-300 text-sm font-medium">
+              <p className="text-slate-300 text-sm font-medium text-center w-full">
                 &copy; {COPYRIGHT_YEAR} {COPYRIGHT_NAME}. Crafted with passion.
               </p>
-              <div className="flex items-center gap-6 text-sm">
+              {/* <div className="flex items-center gap-6 text-sm">
                 <Link
                   href="#about"
                   className="text-slate-300 hover:text-orange-400 transition-colors font-semibold"
@@ -298,7 +298,7 @@ export function Footer() {
                 >
                   Process
                 </Link>
-              </div>
+              </div> */}
             </div>
           </Reveal>
         </div>

@@ -154,7 +154,6 @@ export default function CaseStudyPage() {
           <span className="text-xs font-mono uppercase tracking-wider">
             Scroll to explore
           </span>
-          <div className="w-px h-16 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
         </div>
 
         {/* Back button */}

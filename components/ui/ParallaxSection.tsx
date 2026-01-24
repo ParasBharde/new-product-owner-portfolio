@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from "react";
 
 interface ParallaxSectionProps {
   children: React.ReactNode;
   speed?: number;
   className?: string;
-  direction?: 'up' | 'down';
+  direction?: "up" | "down";
 }
 
 /**
@@ -16,8 +16,8 @@ interface ParallaxSectionProps {
 export function ParallaxSection({
   children,
   speed = 0.5,
-  className = '',
-  direction = 'up',
+  className = "",
+  direction = "up",
 }: ParallaxSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
@@ -33,15 +33,15 @@ export function ParallaxSection({
 
       // Calculate offset based on scroll position
       if (rect.top < viewportHeight && rect.bottom > 0) {
-        const multiplier = direction === 'up' ? -1 : 1;
-        const newOffset = ((scrolled - elementTop) * speed) * multiplier;
+        const multiplier = direction === "up" ? -1 : 1;
+        const newOffset = (scrolled - elementTop) * speed * multiplier;
         setOffset(newOffset);
       }
     };
 
     handleScroll(); // Initial call
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [speed, direction]);
 
   return (
@@ -49,7 +49,7 @@ export function ParallaxSection({
       <div
         style={{
           transform: `translateY(${offset}px)`,
-          transition: 'transform 0.1s ease-out',
+          transition: "transform 0.1s ease-out",
         }}
       >
         {children}
