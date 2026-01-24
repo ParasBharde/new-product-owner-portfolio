@@ -177,43 +177,41 @@ export default function CaseStudyPage() {
       <section id="overview" className="relative bg-white">
         {/* Overview Section */}
         <div className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              <div>
-                <h2 className="font-serif text-5xl text-stone-900 mb-6">
-                  Overview
-                </h2>
-                <p className="text-xl text-stone-600 leading-relaxed mb-8">
-                  {project.description}
-                </p>
-                <div className="space-y-4 border-l-2 border-orange-600 pl-6">
-                  <div>
-                    <h4 className="font-semibold text-stone-900 mb-1">Role</h4>
-                    <p className="text-stone-600">{project.role}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-stone-900 mb-1">Focus</h4>
-                    <p className="text-stone-600">{project.focus}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-stone-900 mb-1">
-                      Outcome
-                    </h4>
-                    <p className="text-stone-600">{project.outcome}</p>
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="font-serif text-5xl text-stone-900 mb-6">
+                Overview
+              </h2>
+              <p className="text-xl text-stone-600 leading-relaxed mb-8">
+                {project.description}
+              </p>
+              <div className="space-y-4 border-l-2 border-orange-600 pl-6">
+                <div>
+                  <h4 className="font-semibold text-stone-900 mb-1">Role</h4>
+                  <p className="text-stone-600">{project.role}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-stone-900 mb-1">Focus</h4>
+                  <p className="text-stone-600">{project.focus}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-stone-900 mb-1">Outcome</h4>
+                  <p className="text-stone-600">{project.outcome}</p>
                 </div>
               </div>
-
-              <ParallaxSection speed={0.2} direction="down">
-                <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="text-7xl font-serif text-stone-800 mb-4">
-                      {project.outcome.match(/\d+/)?.[0] || "100"}%
-                    </div>
-                    <p className="text-stone-600 font-medium">Success Rate</p>
-                  </div>
-                </div>
-              </ParallaxSection>
             </div>
+
+            <ParallaxSection speed={0.2} direction="down">
+              <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="text-7xl font-serif text-stone-800 mb-4">
+                    {project.outcome.match(/\d+/)?.[0] || "100"}%
+                  </div>
+                  <p className="text-stone-600 font-medium">Success Rate</p>
+                </div>
+              </div>
+            </ParallaxSection>
+          </div>
         </div>
 
         {/* Challenge Section */}
@@ -222,34 +220,34 @@ export default function CaseStudyPage() {
           className="relative py-24 px-6 lg:px-12 bg-stone-50"
         >
           <div className="max-w-6xl mx-auto">
-              <h2 className="font-serif text-5xl text-stone-900 mb-12">
-                The Challenge
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {["User Research", "Design Strategy", "Implementation"].map(
-                  (item, index) => (
-                    <ParallaxSection
-                      key={item}
-                      speed={0.1 + index * 0.05}
-                      className="bg-white p-8 rounded-lg shadow-lg"
-                    >
-                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                        <span className="text-orange-600 font-bold text-xl">
-                          {index + 1}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-semibold text-stone-900 mb-3">
-                        {item}
-                      </h3>
-                      <p className="text-stone-600">
-                        Detailed analysis and strategic approach to solving
-                        complex user experience challenges through data-driven
-                        decisions.
-                      </p>
-                    </ParallaxSection>
-                  ),
-                )}
-              </div>
+            <h2 className="font-serif text-5xl text-stone-900 mb-12">
+              The Challenge
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {["User Research", "Design Strategy", "Implementation"].map(
+                (item, index) => (
+                  <ParallaxSection
+                    key={item}
+                    speed={0.1 + index * 0.05}
+                    className="bg-white p-8 rounded-lg shadow-lg"
+                  >
+                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                      <span className="text-orange-600 font-bold text-xl">
+                        {index + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-stone-900 mb-3">
+                      {item}
+                    </h3>
+                    <p className="text-stone-600">
+                      Detailed analysis and strategic approach to solving
+                      complex user experience challenges through data-driven
+                      decisions.
+                    </p>
+                  </ParallaxSection>
+                ),
+              )}
+            </div>
           </div>
         </div>
 
@@ -326,10 +324,7 @@ export default function CaseStudyPage() {
         </div>
 
         {/* Next Project Teaser */}
-        <div
-          id="contact"
-          className="relative py-24 px-6 lg:px-12 bg-stone-900 text-white"
-        >
+        <div className="relative pb-24 px-6 lg:px-12 bg-stone-900 text-white">
           <div className="max-w-6xl mx-auto text-center">
             <ParallaxSection speed={0.2}>
               <h3 className="text-stone-400 font-mono text-sm uppercase tracking-widest mb-4">
