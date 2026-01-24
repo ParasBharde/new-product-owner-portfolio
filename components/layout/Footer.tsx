@@ -11,6 +11,7 @@ import {
   ArrowUpRight,
   Send,
   Sparkles,
+  Facebook,
 } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { ParallaxSection } from "@/components/ui/ParallaxSection";
@@ -31,6 +32,7 @@ const iconByLabel: Record<
   Github: Github,
   GitHub: Github,
   Twitter: Twitter,
+  Facebook: Facebook,
   Medium: PenTool,
   Blog: PenTool,
 };

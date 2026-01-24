@@ -23,8 +23,15 @@ export default function CaseStudyPage() {
     // Trigger entrance animation
     setIsLoaded(true);
 
+    let ticking = false;
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -45,8 +52,8 @@ export default function CaseStudyPage() {
   }
 
   // Parallax calculations for hero
-  const heroOpacity = Math.max(1 - scrollY / 500, 0);
-  const heroScale = Math.max(1 - scrollY / 2000, 0.8);
+  const heroOpacity = Math.max(1 - scrollY / 800, 0);
+  const heroScale = Math.max(1 - scrollY / 3000, 0.85);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -56,7 +63,7 @@ export default function CaseStudyPage() {
         <div
           className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-purple-600/20"
           style={{
-            transform: `translateY(${scrollY * 0.5}px) scale(${1 + scrollY * 0.0003})`,
+            transform: `translateY(${scrollY * 0.3}px) scale(${1 + scrollY * 0.0002})`,
           }}
         />
 
@@ -65,7 +72,7 @@ export default function CaseStudyPage() {
           style={{
             background:
               "radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)",
-            transform: `translateY(${scrollY * 0.3}px)`,
+            transform: `translateY(${scrollY * 0.2}px)`,
           }}
         />
 
@@ -74,7 +81,7 @@ export default function CaseStudyPage() {
           style={{
             background:
               "radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)",
-            transform: `translateY(${scrollY * 0.4}px)`,
+            transform: `translateY(${scrollY * 0.25}px)`,
           }}
         />
 
@@ -83,7 +90,7 @@ export default function CaseStudyPage() {
           className="relative z-10 h-full flex items-center justify-center px-6 lg:px-12"
           style={{
             opacity: heroOpacity,
-            transform: `scale(${heroScale}) translateY(${scrollY * 0.2}px)`,
+            transform: `scale(${heroScale}) translateY(${scrollY * 0.1}px)`,
           }}
         >
           <div
@@ -170,7 +177,6 @@ export default function CaseStudyPage() {
       <section id="overview" className="relative bg-white">
         {/* Overview Section */}
         <div className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto">
-          <ParallaxSection speed={0.3}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-5xl text-stone-900 mb-6">
@@ -197,7 +203,7 @@ export default function CaseStudyPage() {
                 </div>
               </div>
 
-              <ParallaxSection speed={0.5} direction="down">
+              <ParallaxSection speed={0.2} direction="down">
                 <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="text-7xl font-serif text-stone-800 mb-4">
@@ -208,7 +214,6 @@ export default function CaseStudyPage() {
                 </div>
               </ParallaxSection>
             </div>
-          </ParallaxSection>
         </div>
 
         {/* Challenge Section */}
@@ -217,7 +222,6 @@ export default function CaseStudyPage() {
           className="relative py-24 px-6 lg:px-12 bg-stone-50"
         >
           <div className="max-w-6xl mx-auto">
-            <ParallaxSection speed={0.2}>
               <h2 className="font-serif text-5xl text-stone-900 mb-12">
                 The Challenge
               </h2>
@@ -226,7 +230,7 @@ export default function CaseStudyPage() {
                   (item, index) => (
                     <ParallaxSection
                       key={item}
-                      speed={0.3 + index * 0.1}
+                      speed={0.1 + index * 0.05}
                       className="bg-white p-8 rounded-lg shadow-lg"
                     >
                       <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
@@ -246,7 +250,6 @@ export default function CaseStudyPage() {
                   ),
                 )}
               </div>
-            </ParallaxSection>
           </div>
         </div>
 
