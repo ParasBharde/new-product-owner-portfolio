@@ -134,7 +134,7 @@ export function AnimatedImage({
 
           {/* Image layer with mask */}
           <div
-            className="absolute inset-0 flex items-center justify-center h-[85%]"
+            className="absolute inset-0"
             style={{
               transform: `translateZ(20px)`,
             }}
