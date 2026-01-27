@@ -75,7 +75,7 @@
       "focus": "Organizational agility, leadership alignment, Scrum & Kanban adoption",
       "outcome": "Improved delivery predictability, faster release cycles, and stronger cross-team collaboration.",
       "link": "",
-      "image": "",
+      "imageKey": "agile_transformation",
       "type": "Consulting"
     },
     {
@@ -87,7 +87,7 @@
       "focus": "Product management, backlog refinement, outcome-driven delivery",
       "outcome": "Clearer product roadmaps, reduced waste, and improved customer-focused outcomes.",
       "link": "",
-      "image": "",
+      "imageKey": "production_delivery",
       "type": "Coaching"
     },
     {
@@ -99,7 +99,7 @@
       "focus": "Agile leadership, team empowerment, decision-making clarity",
       "outcome": "Leaders enabled teams instead of controlling them, resulting in higher engagement and ownership.",
       "link": "",
-      "image": "",
+      "imageKey": "agile_leadership",
       "type": "Mentorship"
     }
   ],

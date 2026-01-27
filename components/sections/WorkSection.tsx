@@ -1,6 +1,6 @@
-import { Reveal } from '@/components/ui/Reveal';
-import { ProjectCard } from '@/components/ui/ProjectCard';
-import { PROJECTS } from '@/lib/constants';
+import { Reveal } from "@/components/ui/Reveal";
+import { ProjectCard } from "@/components/ui/ProjectCard";
+import { PROJECTS } from "@/lib/constants";
 
 /**
  * Work section displaying featured projects

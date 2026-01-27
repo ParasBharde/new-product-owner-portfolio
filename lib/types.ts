@@ -1,5 +1,6 @@
 import { Interface } from "node:readline";
 import { StaticImageData } from "next/image";
+import { projectImages, ProjectImageKey } from "./constants";
 
 /**
  * Navigation link structure
@@ -21,6 +22,7 @@ export interface Project {
   focus: string;
   outcome: string;
   link: string;
+  image?: StaticImageData; // Add this
 }
 
 /**

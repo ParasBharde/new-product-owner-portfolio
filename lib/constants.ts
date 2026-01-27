@@ -10,6 +10,22 @@ import type {
 } from "./types";
 import portfolioData from "../portfolio.json";
 import Img from "../assests/Profile.jpg";
+import agile_transformation from "@/assests/Work/agile_transformation.png";
+import production_delivery from "@/assests/Work/production_delivery.png";
+import agile_leadership from "@/assests/Work/agile_leadership.png";
+import { StaticImageData } from "next/image";
+
+export type ProjectImageKey = keyof typeof projectImages;
+
+// Image mapping object
+export const projectImages: Record<string, StaticImageData> = {
+  agile_transformation,
+  production_delivery,
+  agile_leadership,
+  // Add more images here as you add them
+  // product_delivery: product_delivery_img,
+  // leadership: leadership_img,
+};
 
 /**
  * Brand name
@@ -84,10 +100,15 @@ export const Profile_Img = Img;
 export const PRINCIPLES: Principle[] = portfolioData.philosophy.principles;
 
 /**
- * Projects/Selected works
+ * Projects/Selected works - with resolved images
  */
-export const PROJECTS: Project[] = portfolioData.projects;
-
+export const PROJECTS: Project[] = portfolioData.projects.map((project) => ({
+  ...project,
+  image:
+    project.imageKey && projectImages[project.imageKey as ProjectImageKey]
+      ? projectImages[project.imageKey as ProjectImageKey]
+      : undefined,
+}));
 /**
  * Tools and skills
  */

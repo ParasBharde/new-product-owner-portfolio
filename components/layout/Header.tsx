@@ -38,11 +38,15 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Brand Logo */}
         <Link
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
+          href="/" 
+          onClick={
+            isCaseStudyOpen
+              ? undefined
+              : (e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+          }
           className={`font-serif text-xl font-bold tracking-tight z-50 relative transition-colors focus:outline-none
   ${
     isCaseStudyOpen && !isScrolled
@@ -87,7 +91,7 @@ export function Header() {
                 </Link>
               ))}
           <Link
-            href={isCaseStudyOpen ? "/#work" : "#contact"}
+            href={isCaseStudyOpen ? "/#hero" : "#contact"}
             onClick={(e) => {
               if (!isCaseStudyOpen) handleContactClick(e);
             }}

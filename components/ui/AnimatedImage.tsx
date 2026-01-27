@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import { log } from "console";
 
 interface AnimatedImageProps {
   src: any;
@@ -36,7 +37,7 @@ export function AnimatedImage({
       setFloatOffset(offset);
       animationId = requestAnimationFrame(animate);
     };
-
+    console.log(src);
     animationId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationId);
   }, []);

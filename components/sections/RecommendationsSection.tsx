@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { RECOMMENDATIONS } from "@/lib/constants";
-import { useRouter } from "next/navigation";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, useAnimationControls, AnimatePresence } from "framer-motion";
 
@@ -12,7 +11,6 @@ import { motion, useAnimationControls, AnimatePresence } from "framer-motion";
  * Mobile: Swipe to navigate through cards
  */
 export function RecommendationsSection() {
-  const router = useRouter();
   const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimationControls();
   const [isMobile, setIsMobile] = useState(false);
@@ -179,7 +177,6 @@ export function RecommendationsSection() {
 
                 {/* Author Info */}
                 <div className="flex items-center gap-4 border-t border-stone-200 pt-6">
-                <div className="flex items-center gap-4 border-b border-stone-200 pb-6 mb-6">
                   {/* Avatar */}
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-purple-500 flex items-center justify-center shadow-md flex-shrink-0">
                     <span className="text-white font-bold text-lg">
@@ -198,7 +195,6 @@ export function RecommendationsSection() {
                         onClick={(e) => {
                           e.stopPropagation();
                           window.scrollTo({ top: 0, behavior: "smooth" });
-                          router.push("/");
                         }}
                         className="hover:text-orange-600 transition-colors"
                       >
@@ -207,16 +203,6 @@ export function RecommendationsSection() {
                     </p>
                   </div>
                 </div>
-
-                {/* Quote Icon */}
-                <div className="mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Quote className="w-6 h-6 text-white" fill="currentColor" />
-                </div>
-
-                {/* Content */}
-                <p className="text-stone-700 leading-relaxed text-base italic">
-                  "{recommendation.content}"
-                </p>
               </div>
             ))}
           </motion.div>
@@ -280,7 +266,6 @@ export function RecommendationsSection() {
 
                   {/* Author Info */}
                   <div className="flex items-center gap-4 border-t border-stone-200 pt-6">
-                  <div className="flex items-center gap-4 border-b border-stone-200 pb-6 mb-6">
                     {/* Avatar */}
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-purple-500 flex items-center justify-center shadow-md flex-shrink-0">
                       <span className="text-white font-bold text-lg">
@@ -299,7 +284,6 @@ export function RecommendationsSection() {
                           onClick={(e) => {
                             e.stopPropagation();
                             window.scrollTo({ top: 0, behavior: "smooth" });
-                            router.push("/");
                           }}
                           className="hover:text-orange-600 transition-colors"
                         >
@@ -308,16 +292,6 @@ export function RecommendationsSection() {
                       </p>
                     </div>
                   </div>
-
-                  {/* Quote Icon */}
-                  <div className="mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <Quote className="w-6 h-6 text-white" fill="currentColor" />
-                  </div>
-
-                  {/* Content */}
-                  <p className="text-stone-700 leading-relaxed text-base italic">
-                    "{RECOMMENDATIONS[currentIndex].content}"
-                  </p>
                 </div>
               </div>
             </motion.div>
