@@ -11,6 +11,7 @@ import {
   COPYRIGHT_NAME,
 } from "@/lib/constants";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 // Icon mapping by label
 const iconByLabel: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -28,13 +29,44 @@ const iconByLabel: Record<string, React.ComponentType<{ className?: string }>> =
 export function Footer() {
   const [email, setEmail] = useState("");
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const MAX_CHARS = 250;
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter signup
-    console.log("Newsletter signup:", email);
-    setEmail("");
+
+    if (!email || !message) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE,
+        {
+          user_email: email,
+          user_message: message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_KEY
+      );
+
+      alert("Message sent successfully ✅");
+
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message ❌");
+    } finally {
+      setLoading(false);
+    }
   };
+
+
 
   return (
     <footer
@@ -171,22 +203,50 @@ export function Footer() {
                   <p className="text-slate-200 text-sm mb-4 font-medium">
                     Get notified about new projects and insights
                   </p>
-                  <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+                  <form
+                    onSubmit={handleNewsletterSubmit}
+                    className="space-y-3"
+                  >
+                    {/* Email */}
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your@email.com"
-                      className="flex-1 bg-slate-700/60 border border-slate-600/70 rounded-lg px-4 py-2 text-white placeholder-slate-300 focus:outline-none focus:border-orange-500/80 focus:bg-slate-700/80 transition-colors shadow-inner"
+                      required
+                      className="w-full bg-slate-700/60 border border-slate-600/70 rounded-lg px-4 py-2 text-white placeholder-slate-300 focus:outline-none focus:border-orange-500/80 transition-colors"
                     />
+
+                    {/* Message */}
+                    <textarea
+                      value={message}
+                      onChange={(e) => {
+                        if (e.target.value.length <= MAX_CHARS) {
+                          setMessage(e.target.value);
+                        }
+                      }}
+                      placeholder="Write your message..."
+                      rows={4}
+                      required
+                      className="w-full bg-slate-700/60 border border-slate-600/70 rounded-lg px-4 py-2 text-white placeholder-slate-300 focus:outline-none focus:border-orange-500/80 resize-none transition-colors"
+                    />
+
+                    {/* Character Counter */}
+                    <div className="text-right text-xs text-slate-400">
+                      {message.length}/{MAX_CHARS}
+                    </div>
+
+                    {/* Submit */}
                     <button
                       type="submit"
-                      className="bg-orange-600 hover:bg-orange-500 text-white p-2 rounded-lg transition-colors shadow-lg hover:shadow-orange-500/60"
-                      aria-label="Subscribe"
+                      disabled={loading}
+                      className="w-full bg-orange-600 hover:bg-orange-500 disabled:opacity-60 text-white py-2 rounded-lg transition-colors shadow-lg flex items-center justify-center gap-2"
                     >
-                      <Send className="w-5 h-5" />
+                      {loading ? "Sending..." : "Send Message"}
+                      <Send className="w-4 h-4" />
                     </button>
                   </form>
+
                 </div>
               </div>
             </Reveal>
