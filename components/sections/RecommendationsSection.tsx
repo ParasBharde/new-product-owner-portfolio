@@ -1,17 +1,40 @@
 "use client";
-
+import React, { useState, useEffect } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { RECOMMENDATIONS } from "@/lib/constants";
 import { Quote } from "lucide-react";
+import { motion, useAnimationControls } from "framer-motion";
 
 /**
  * Recommendations Section with infinite scroll animation
  * Cards move from right to left continuously
  */
 export function RecommendationsSection() {
+  const [isPaused, setIsPaused] = useState(false);
+  const controls = useAnimationControls();
+
   // Duplicate recommendations for seamless loop
   const duplicatedRecommendations = [...RECOMMENDATIONS, ...RECOMMENDATIONS];
 
+  useEffect(() => {
+    const animateCarousel = async () => {
+      if (!isPaused) {
+        await controls.start({
+          x: -1920,
+          transition: {
+            duration: 30,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          },
+        });
+      } else {
+        controls.stop();
+      }
+    };
+
+    animateCarousel();
+  }, [isPaused, controls]);
   return (
     <section
       id="recommendations"
@@ -32,11 +55,15 @@ export function RecommendationsSection() {
       </div>
 
       {/* Scrolling Container */}
-      <div className="relative">
-        {/* Gradient overlays for fade effect */}
-
-        {/* Scrolling track */}
-        <div className="flex gap-6 animate-scroll-left hover:pause-animation">
+      <div
+        className="relative"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <motion.div
+          animate={controls}
+          className="gap-6 relative w-full h-full flex items-center justify-center text-3xl font-bold  rounded-xl"
+        >
           {duplicatedRecommendations.map((recommendation, index) => (
             <div
               key={`${recommendation.id}-${index}`}
@@ -73,28 +100,10 @@ export function RecommendationsSection() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Add animation styles */}
-      <style jsx>{`
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-scroll-left {
-          animation: scroll-left 40s linear infinite;
-        }
-
-        .pause-animation:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }

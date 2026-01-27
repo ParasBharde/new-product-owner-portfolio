@@ -38,7 +38,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Brand Logo */}
         <Link
-          href="#"
+          href="/#hero"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });

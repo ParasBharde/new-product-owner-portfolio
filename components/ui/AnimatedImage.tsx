@@ -176,7 +176,7 @@ export function AnimatedImage({
             }}
           >
             <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-4 shadow-2xl">
-              <div className="flex justify-between items-center text-xs font-mono text-white uppercase tracking-wide">
+              <div className="flex justify-between items-center text-xs font-mono text-white uppercase ">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
                   <span className="font-bold">Location</span>
