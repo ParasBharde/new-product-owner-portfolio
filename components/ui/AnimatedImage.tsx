@@ -37,7 +37,6 @@ export function AnimatedImage({
       setFloatOffset(offset);
       animationId = requestAnimationFrame(animate);
     };
-    console.log(src);
     animationId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationId);
   }, []);
