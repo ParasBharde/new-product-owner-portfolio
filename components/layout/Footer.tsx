@@ -60,8 +60,8 @@ export function Footer() {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE || "",
         {
           user_email: email,
           user_message: message,
