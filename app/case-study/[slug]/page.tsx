@@ -4,8 +4,9 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { ParallaxSection } from "@/components/ui/ParallaxSection";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, Percent_Img } from "@/lib/constants";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 /**
  * Case Study Detail Page with Parallax Effect
@@ -163,7 +164,7 @@ export default function CaseStudyPage() {
           </span>
         </div>
         <div
-          className="absolute  left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-1 left-1/2 transform -translate-x-1/2"
           style={{ animation: "bounce 2s infinite" }}
         >
           <div
@@ -214,18 +215,17 @@ export default function CaseStudyPage() {
 
             <ParallaxSection speed={0.3} direction="down">
               <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-7xl font-serif text-stone-800 mb-4">
-                    {project.outcome.match(/\d+/)?.[0] || "100"}%
-                  </div>
-                  <p className="text-stone-600 font-medium">Success Rate</p>
-                </div>
+                <Image
+                  src={Percent_Img}
+                  alt={"100 Percent Rate"}
+                  fill
+                  className="object-cover transition-all duration-500"
+                />
               </div>
             </ParallaxSection>
           </div>
         </div>
-
-        {/* Challenge Section */}
+        {/* Challenge Section */}s
         <div
           id="challenges"
           className="relative py-24 px-6 lg:px-12 bg-gradient-to-b from-stone-50 to-stone-100"
@@ -261,7 +261,6 @@ export default function CaseStudyPage() {
             </div>
           </div>
         </div>
-
         {/* Solution Section with floating elements */}
         <div
           id="solution"
@@ -333,7 +332,6 @@ export default function CaseStudyPage() {
             </div>
           </div>
         </div>
-
         {/* Next Project Teaser */}
         <div className="relative pb-24 px-6 lg:px-12 bg-stone-900 text-white">
           <div className="max-w-6xl mx-auto text-center">
