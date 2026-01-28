@@ -1,38 +1,33 @@
-import Link from 'next/link';
-import type { Project } from '@/lib/types';
+import Link from "next/link";
+import type { Project } from "@/lib/types";
+import Image from "next/image";
 
+// 👇 CHANGE THIS INTERFACE
 interface ProjectCardProps {
   project: Project;
   reversed?: boolean;
 }
 
-/**
- * Project card component for displaying work items
- * Supports reversed layout for alternating design
- */
+// 👇 CHANGE THIS FUNCTION
 export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
   return (
     <div className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
       {/* Project Mockup */}
       <div
         className={`lg:col-span-7 ${
-          reversed ? 'order-2' : 'order-2 lg:order-1'
+          reversed ? "order-2" : "order-2 lg:order-1"
         }`}
       >
         <div className="relative overflow-hidden bg-stone-200 aspect-[16/10] transition-all duration-700 ease-out group-hover:shadow-2xl group-hover:shadow-stone-200/50">
-          <div
-            className={`absolute inset-0 ${
-              reversed
-                ? 'bg-gradient-to-bl from-stone-200 to-stone-300'
-                : 'bg-gradient-to-br from-stone-200 to-stone-300'
-            }`}
-          />
-
-          {/* Render different mockup based on project type */}
-          {project.id === 'saas-analytics' ? (
-            <DashboardMockup />
-          ) : (
-            <MobileMockup />
+          {/* 👇 CHANGE THIS IMAGE TAG */}
+          {project.image && (
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover transition-all duration-500"
+              placeholder="blur"
+            />
           )}
         </div>
       </div>
@@ -40,7 +35,7 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
       {/* Project Details */}
       <div
         className={`lg:col-span-5 ${
-          reversed ? 'order-1' : 'order-1 lg:order-2'
+          reversed ? "order-1" : "order-1 lg:order-2"
         }`}
       >
         <span className="text-orange-600 font-mono text-xs uppercase tracking-widest mb-4 block">

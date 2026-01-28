@@ -9,7 +9,10 @@ import { HERO, Profile_Img } from "@/lib/constants";
  */
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center pt-20 px-6 lg:px-12 max-w-7xl mx-auto relative">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center pt-20 px-6 lg:px-12 max-w-7xl mx-auto relative"
+    >
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Text Content */}
         <div className="lg:col-span-8">

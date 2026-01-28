@@ -1,11 +1,12 @@
-'use client';
+"use client";
 
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
-import { ParallaxSection } from '@/components/ui/ParallaxSection';
-import { PROJECTS } from '@/lib/constants';
-import { useEffect, useState } from 'react';
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ParallaxSection } from "@/components/ui/ParallaxSection";
+import { PROJECTS, Percent_Img } from "@/lib/constants";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 /**
  * Case Study Detail Page with Parallax Effect
@@ -23,12 +24,19 @@ export default function CaseStudyPage() {
     // Trigger entrance animation
     setIsLoaded(true);
 
+    let ticking = false;
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!project) {
@@ -45,34 +53,34 @@ export default function CaseStudyPage() {
   }
 
   // Parallax calculations for hero
-  const heroOpacity = Math.max(1 - scrollY / 500, 0);
-  const heroScale = Math.max(1 - scrollY / 2000, 0.8);
+  const heroOpacity = Math.max(1 - scrollY / 800, 0);
+  const heroScale = Math.max(1 - scrollY / 3000, 0.85);
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen ">
       {/* Parallax Hero Section */}
       <section className="relative h-screen overflow-hidden bg-gradient-to-br from-stone-900 via-stone-800 to-orange-900">
         {/* Animated background layers */}
         <div
           className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-purple-600/20"
           style={{
-            transform: `translateY(${scrollY * 0.5}px) scale(${1 + scrollY * 0.0003})`,
+            transform: `translateY(${scrollY * 0.3}px) scale(${1 + scrollY * 0.0002})`,
           }}
         />
 
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)',
-            transform: `translateY(${scrollY * 0.3}px)`,
+            background:"radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)",
+            transform: `translateY(${scrollY * 0.2}px)`,
           }}
         />
 
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)',
-            transform: `translateY(${scrollY * 0.4}px)`,
+            background:"radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)",
+            transform: `translateY(${scrollY * 0.25}px)`,
           }}
         />
 
@@ -81,19 +89,21 @@ export default function CaseStudyPage() {
           className="relative z-10 h-full flex items-center justify-center px-6 lg:px-12"
           style={{
             opacity: heroOpacity,
-            transform: `scale(${heroScale}) translateY(${scrollY * 0.2}px)`,
+            transform: `scale(${heroScale}) translateY(${scrollY * 0.1}px)`,
           }}
         >
           <div
             className={`max-w-5xl mx-auto text-center transition-all duration-1000 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+              isLoaded
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-20"
             }`}
           >
             {/* Category badge */}
             <div
               className="inline-block mb-6 px-4 py-2 bg-orange-600/20 backdrop-blur-sm border border-orange-600/30 rounded-full transition-all duration-700 delay-200"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(20px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -106,7 +116,7 @@ export default function CaseStudyPage() {
             <h1
               className="font-serif text-6xl md:text-8xl text-white mb-8 leading-tight transition-all duration-1000 delay-300"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(30px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -117,7 +127,7 @@ export default function CaseStudyPage() {
             <p
               className="text-xl md:text-2xl text-stone-300 font-light max-w-3xl mx-auto mb-12 transition-all duration-1000 delay-500"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(30px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -128,7 +138,7 @@ export default function CaseStudyPage() {
             <div
               className="flex flex-wrap justify-center gap-8 text-stone-400 font-mono text-sm transition-all duration-1000 delay-700"
               style={{
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                transform: isLoaded ? "translateY(0)" : "translateY(30px)",
                 opacity: isLoaded ? 1 : 0,
               }}
             >
@@ -147,100 +157,116 @@ export default function CaseStudyPage() {
           className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60"
           style={{ opacity: heroOpacity }}
         >
-          <span className="text-xs font-mono uppercase tracking-wider">Scroll to explore</span>
-          <div className="w-px h-16 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
+          <span className="text-xs font-mono uppercase tracking-wider">
+            Scroll to explore
+          </span>
         </div>
-
-        {/* Back button */}
-        <Link
-          href="/#work"
-          className="absolute top-8 left-8 flex items-center gap-2 text-white/80 hover:text-white transition-colors z-20 group"
+        <div
+          className="absolute bottom-1 left-1/2 transform -translate-x-1/2"
+          style={{ animation: "bounce 2s infinite" }}
         >
-          <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
-          <span className="font-medium">Back to Work</span>
-        </Link>
+          <div
+            className="
+          w-6 h-10 border-2 border-white rounded-full flex justify-center"
+          >
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
       </section>
 
       {/* Content Section with Parallax Layers */}
-      <section className="relative bg-white">
+      <section id="overview" className="relative ">
         {/* Overview Section */}
         <div className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto">
-          <ParallaxSection speed={0.3}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              <div>
-                <h2 className="font-serif text-5xl text-stone-900 mb-6">
-                  Overview
-                </h2>
-                <p className="text-xl text-stone-600 leading-relaxed mb-8">
-                  {project.description}
-                </p>
-                <div className="space-y-4 border-l-2 border-orange-600 pl-6">
-                  <div>
-                    <h4 className="font-semibold text-stone-900 mb-1">Role</h4>
-                    <p className="text-stone-600">{project.role}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-stone-900 mb-1">Focus</h4>
-                    <p className="text-stone-600">{project.focus}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-stone-900 mb-1">Outcome</h4>
-                    <p className="text-stone-600">{project.outcome}</p>
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="font-serif text-5xl text-stone-900 mb-6">
+                Overview
+              </h2>
+              <p className="text-xl text-stone-600 leading-relaxed mb-8">
+                {project.description}
+              </p>
+              <div className="space-y-4 border-l-2 border-orange-600 pl-6">
+                <div>
+                  <h4 className="font-semibold text-stone-900 mb-1">Role</h4>
+                  <p className="text-stone-600">{project.role}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-stone-900 mb-1">Focus</h4>
+                  <p className="text-stone-600">{project.focus}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-stone-900 mb-1">Outcome</h4>
+                  <p className="text-stone-600">{project.outcome}</p>
                 </div>
               </div>
-
-              <ParallaxSection speed={0.5} direction="down">
-                <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="text-7xl font-serif text-stone-800 mb-4">
-                      {project.outcome.match(/\d+/)?.[0] || '100'}%
-                    </div>
-                    <p className="text-stone-600 font-medium">Success Rate</p>
-                  </div>
-                </div>
-              </ParallaxSection>
             </div>
-          </ParallaxSection>
-        </div>
 
-        {/* Challenge Section */}
-        <div className="relative py-24 px-6 lg:px-12 bg-stone-50">
-          <div className="max-w-6xl mx-auto">
-            <ParallaxSection speed={0.2}>
-              <h2 className="font-serif text-5xl text-stone-900 mb-12">
-                The Challenge
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {['User Research', 'Design Strategy', 'Implementation'].map((item, index) => (
-                  <ParallaxSection
-                    key={item}
-                    speed={0.3 + index * 0.1}
-                    className="bg-white p-8 rounded-lg shadow-lg"
-                  >
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                      <span className="text-orange-600 font-bold text-xl">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-stone-900 mb-3">{item}</h3>
-                    <p className="text-stone-600">
-                      Detailed analysis and strategic approach to solving complex user
-                      experience challenges through data-driven decisions.
-                    </p>
-                  </ParallaxSection>
-                ))}
+            <ParallaxSection speed={0.3} direction="down">
+              <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
+                <Image
+                  src={Percent_Img}
+                  alt={"100 Percent Rate"}
+                  fill
+                  className="object-cover transition-all duration-500"
+                />
               </div>
             </ParallaxSection>
           </div>
         </div>
-
+        {/* Challenge Section */}s
+        <div
+          id="challenges"
+          className="relative py-24 px-6 lg:px-12 bg-gradient-to-b from-stone-50 to-stone-100"
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-serif text-5xl text-stone-900 mb-12">
+              The Challenge
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {["User Research", "Design Strategy", "Implementation"].map(
+                (item, index) => (
+                  <ParallaxSection
+                    key={item}
+                    speed={0.1 + index * 0.05}
+                    className="bg-white p-8 rounded-lg shadow-lg"
+                  >
+                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                      <span className="text-orange-600 font-bold text-xl">
+                        {index + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-stone-900 mb-3">
+                      {item}
+                    </h3>
+                    <p className="text-stone-600">
+                      Detailed analysis and strategic approach to solving
+                      complex user experience challenges through data-driven
+                      decisions.
+                    </p>
+                  </ParallaxSection>
+                ),
+              )}
+            </div>
+          </div>
+        </div>
         {/* Solution Section with floating elements */}
-        <div className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto overflow-hidden">
+        <div
+          id="solution"
+          className="relative py-32 px-6 lg:px-12 max-w-6xl mx-auto overflow-hidden"
+        >
           {/* Floating background shapes */}
-          <ParallaxSection speed={0.8} className="absolute top-0 right-0 w-96 h-96 -mr-48">
+          <ParallaxSection
+            speed={0.8}
+            className="absolute top-0 right-0 w-96 h-96 -mr-48"
+          >
             <div className="w-full h-full bg-gradient-to-br from-orange-200 to-purple-200 rounded-full blur-3xl opacity-30" />
           </ParallaxSection>
 
-          <ParallaxSection speed={0.6} className="absolute bottom-0 left-0 w-64 h-64 -ml-32">
+          <ParallaxSection
+            speed={0.6}
+            className="absolute bottom-0 left-0 w-64 h-64 -ml-32"
+          >
             <div className="w-full h-full bg-gradient-to-tr from-blue-200 to-green-200 rounded-full blur-3xl opacity-30" />
           </ParallaxSection>
 
@@ -250,9 +276,9 @@ export default function CaseStudyPage() {
                 The Solution
               </h2>
               <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-16">
-                A comprehensive approach combining user research, iterative design, and
-                data-driven decision making to create an intuitive experience that exceeded
-                business goals.
+                A comprehensive approach combining user research, iterative
+                design, and data-driven decision making to create an intuitive
+                experience that exceeded business goals.
               </p>
             </ParallaxSection>
 
@@ -295,9 +321,8 @@ export default function CaseStudyPage() {
             </div>
           </div>
         </div>
-
         {/* Next Project Teaser */}
-        <div className="relative py-24 px-6 lg:px-12 bg-stone-900 text-white">
+        <div className="relative pb-24 px-6 lg:px-12 bg-stone-900 text-white">
           <div className="max-w-6xl mx-auto text-center">
             <ParallaxSection speed={0.2}>
               <h3 className="text-stone-400 font-mono text-sm uppercase tracking-widest mb-4">
@@ -315,5 +340,5 @@ export default function CaseStudyPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

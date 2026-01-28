@@ -10,6 +10,23 @@ import type {
 } from "./types";
 import portfolioData from "../portfolio.json";
 import Img from "../assests/Profile.jpg";
+import percent_Img from "../assests/image.webp";
+import agile_transformation from "@/assests/Work/agile_transformation.webp";
+import production_delivery from "@/assests/Work/production_delivery.webp";
+import agile_leadership from "@/assests/Work/agile_leadership.webp";
+import { StaticImageData } from "next/image";
+
+export type ProjectImageKey = keyof typeof projectImages;
+
+// Image mapping object
+export const projectImages: Record<string, StaticImageData> = {
+  agile_transformation,
+  production_delivery,
+  agile_leadership,
+  // Add more images here as you add them
+  // product_delivery: product_delivery_img,
+  // leadership: leadership_img,
+};
 
 /**
  * Brand name
@@ -33,6 +50,12 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Process", href: "#process" },
 ];
 
+export const CASE_NAV_LINKS: NavLink[] = [
+  { label: "Overview", href: "#overview" },
+  { label: "Challenges", href: "#challenges" },
+  { label: "Solution", href: "#solution" },
+];
+
 /**
  * Mobile navigation links (includes Contact)
  */
@@ -54,7 +77,7 @@ export const HERO = {
   ctaText: portfolioData.hero.ctaText,
   ctaHref: portfolioData.hero.ctaHref,
   location: portfolioData.personal.location,
-  experience: portfolioData.personal.experience
+  experience: portfolioData.personal.experience,
 };
 
 /**
@@ -72,16 +95,23 @@ export const PHILOSOPHY = {
 
 export const Profile_Img = Img;
 
+export const Percent_Img = percent_Img;
+
 /**
  * Philosophy principles grid
  */
 export const PRINCIPLES: Principle[] = portfolioData.philosophy.principles;
 
 /**
- * Projects/Selected works
+ * Projects/Selected works - with resolved images
  */
-export const PROJECTS: Project[] = portfolioData.projects;
-
+export const PROJECTS: Project[] = portfolioData.projects.map((project) => ({
+  ...project,
+  image:
+    project.imageKey && projectImages[project.imageKey as ProjectImageKey]
+      ? projectImages[project.imageKey as ProjectImageKey]
+      : undefined,
+}));
 /**
  * Tools and skills
  */
@@ -116,47 +146,4 @@ export const COPYRIGHT_NAME = portfolioData.footer.copyrightName;
 /**
  * Recommendations/Testimonials
  */
-export const RECOMMENDATIONS: Recommendation[] = [
-  {
-    id: "1",
-    name: "Sarah Mitchell",
-    role: "VP of Product",
-    company: "TechCorp",
-    content: "An exceptional product owner who consistently delivers value. Their ability to balance user needs with business objectives is remarkable.",
-  },
-  {
-    id: "2",
-    name: "David Chen",
-    role: "Engineering Lead",
-    company: "StartupXYZ",
-    content: "Working with them was a game-changer for our team. They brought clarity to complex problems and fostered true collaboration.",
-  },
-  {
-    id: "3",
-    name: "Maria Rodriguez",
-    role: "UX Designer",
-    company: "DesignHub",
-    content: "A visionary leader who understands the importance of user-centered design. Their strategic thinking elevated our entire product.",
-  },
-  {
-    id: "4",
-    name: "James Thompson",
-    role: "CEO",
-    company: "InnovateLabs",
-    content: "Their agile mindset and ability to drive outcomes made them an invaluable asset. Highly recommend for any product leadership role.",
-  },
-  {
-    id: "5",
-    name: "Lisa Wang",
-    role: "Scrum Master",
-    company: "AgileFirst",
-    content: "A natural product owner with excellent stakeholder management skills. They transformed how our team approached product development.",
-  },
-  {
-    id: "6",
-    name: "Michael Brown",
-    role: "CTO",
-    company: "CloudTech",
-    content: "Exceptional at turning ambiguous requirements into clear roadmaps. Their leadership and product intuition are second to none.",
-  },
-];
+export const RECOMMENDATIONS: Recommendation[] = portfolioData.recommendations;
