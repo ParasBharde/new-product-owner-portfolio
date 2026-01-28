@@ -201,7 +201,7 @@ export default function CaseStudyPage() {
               </div>
             </div>
 
-            <ParallaxSection speed={0.2} direction="down">
+            <ParallaxSection speed={0.3} direction="down">
               <div className="bg-gradient-to-br from-stone-100 to-stone-200 aspect-square rounded-lg shadow-xl flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="text-7xl font-serif text-stone-800 mb-4">
