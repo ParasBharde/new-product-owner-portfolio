@@ -10,10 +10,10 @@ import type {
 } from "./types";
 import portfolioData from "../portfolio.json";
 import Img from "../assests/Profile.jpg";
-import percent_Img from "../assests/image.png" 
-import agile_transformation from "@/assests/Work/agile_transformation.png";
-import production_delivery from "@/assests/Work/production_delivery.png";
-import agile_leadership from "@/assests/Work/agile_leadership.png";
+import percent_Img from "../assests/image.webp";
+import agile_transformation from "@/assests/Work/agile_transformation.webp";
+import production_delivery from "@/assests/Work/production_delivery.webp";
+import agile_leadership from "@/assests/Work/agile_leadership.webp";
 import { StaticImageData } from "next/image";
 
 export type ProjectImageKey = keyof typeof projectImages;

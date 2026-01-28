@@ -262,7 +262,7 @@ export function RecommendationsSection() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-grow overflow-y-auto mb-6 pr-2">
+                  <div className="flex-grow  mb-6 pr-2">
                     <p className="text-stone-700 leading-relaxed text-base italic">
                       "{RECOMMENDATIONS[currentIndex].content}"
                     </p>
