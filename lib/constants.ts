@@ -56,6 +56,12 @@ export const CASE_NAV_LINKS: NavLink[] = [
   { label: "Solution", href: "#solution" },
 ];
 
+export const MOBILE_CASE_NAV_LINKS: NavLink[] = [
+  { label: "Overview", href: "#overview" },
+  { label: "Challenges", href: "#challenges" },
+  { label: "Solution", href: "#solution" },
+];
+
 /**
  * Mobile navigation links (includes Contact)
  */

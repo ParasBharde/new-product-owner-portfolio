@@ -8,6 +8,7 @@ import { MobileMenu } from "@/components/ui/MobileMenu";
 import {
   BRAND_NAME,
   NAV_LINKS,
+  MOBILE_CASE_NAV_LINKS,
   MOBILE_NAV_LINKS,
   CASE_NAV_LINKS,
 } from "@/lib/constants";
@@ -38,7 +39,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Brand Logo */}
         <Link
-          href="/" 
+          href="/"
           onClick={
             isCaseStudyOpen
               ? undefined
@@ -137,7 +138,7 @@ export function Header() {
       {/* Mobile Menu Overlay */}
       <MobileMenu
         isOpen={isOpen}
-        links={MOBILE_NAV_LINKS}
+        links={isCaseStudyOpen ? MOBILE_CASE_NAV_LINKS : MOBILE_NAV_LINKS}
         onLinkClick={close}
       />
     </header>
