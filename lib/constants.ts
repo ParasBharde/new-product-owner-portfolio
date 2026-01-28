@@ -47,7 +47,7 @@ export const SITE_KEYWORDS = portfolioData.seo.keywords;
 export const NAV_LINKS: NavLink[] = [
   { label: "Philosophy", href: "#about" },
   { label: "Selected Work", href: "#work" },
-  { label: "Process", href: "#process" },
+  { label: "Experience", href: "#experience" },
 ];
 
 export const CASE_NAV_LINKS: NavLink[] = [
@@ -68,7 +68,7 @@ export const MOBILE_CASE_NAV_LINKS: NavLink[] = [
 export const MOBILE_NAV_LINKS: NavLink[] = [
   { label: "Philosophy", href: "#about" },
   { label: "Selected Work", href: "#work" },
-  { label: "Process", href: "#process" },
+  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
