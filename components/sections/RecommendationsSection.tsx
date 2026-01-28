@@ -163,7 +163,7 @@ export function RecommendationsSection() {
             {duplicatedRecommendations.map((recommendation, index) => (
               <div
                 key={`${recommendation.id}-${index}`}
-                className="flex-shrink-0 w-[400px] bg-white rounded-2xl p-8 shadow-xl border border-stone-200 hover:shadow-2xl hover:scale-105 hover:border-orange-500/50 transition-all duration-300 group"
+                className="flex-shrink-0 w-[400px] h-[450px] flex flex-col bg-white rounded-2xl p-8 shadow-xl border border-stone-200 hover:shadow-2xl hover:scale-105 hover:border-orange-500/50 transition-all duration-300 group"
               >
                 {/* Quote Icon */}
                 <div className="mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -171,9 +171,11 @@ export function RecommendationsSection() {
                 </div>
 
                 {/* Content */}
-                <p className="text-stone-700 leading-relaxed mb-6 text-base italic">
-                  "{recommendation.content}"
-                </p>
+                <div className="flex-grow overflow-y-auto mb-6 pr-2">
+                  <p className="text-stone-700 leading-relaxed text-base italic">
+                    "{recommendation.content}"
+                  </p>
+                </div>
 
                 {/* Author Info */}
                 <div className="flex items-center gap-4 border-t border-stone-200 pt-6">
@@ -253,19 +255,21 @@ export function RecommendationsSection() {
               className="absolute inset-0 flex items-center justify-center px-4"
             >
               <div className="w-full max-w-md">
-                <div className="bg-white rounded-2xl p-8 shadow-xl border border-stone-200">
+                <div className="bg-white rounded-2xl p-8 shadow-xl border border-stone-200 h-[420px] flex flex-col">
                   {/* Quote Icon */}
-                  <div className="mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="flex-shrink-0 mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
                     <Quote className="w-6 h-6 text-white" fill="currentColor" />
                   </div>
 
                   {/* Content */}
-                  <p className="text-stone-700 leading-relaxed mb-6 text-base italic">
-                    "{RECOMMENDATIONS[currentIndex].content}"
-                  </p>
+                  <div className="flex-grow overflow-y-auto mb-6 pr-2">
+                    <p className="text-stone-700 leading-relaxed text-base italic">
+                      "{RECOMMENDATIONS[currentIndex].content}"
+                    </p>
+                  </div>
 
                   {/* Author Info */}
-                  <div className="flex items-center gap-4 border-t border-stone-200 pt-6">
+                  <div className="flex-shrink-0 flex items-center gap-4 border-t border-stone-200 pt-6">
                     {/* Avatar */}
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-purple-500 flex items-center justify-center shadow-md flex-shrink-0">
                       <span className="text-white font-bold text-lg">

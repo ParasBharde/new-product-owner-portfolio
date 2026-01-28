@@ -332,26 +332,6 @@ export function Footer() {
               <p className="text-slate-300 text-sm font-medium text-center w-full">
                 &copy; {COPYRIGHT_YEAR} {COPYRIGHT_NAME}. Crafted with passion.
               </p>
-              {/* <div className="flex items-center gap-6 text-sm">
-                <Link
-                  href="#about"
-                  className="text-slate-300 hover:text-orange-400 transition-colors font-semibold"
-                >
-                  About
-                </Link>
-                <Link
-                  href="#work"
-                  className="text-slate-300 hover:text-orange-400 transition-colors font-semibold"
-                >
-                  Work
-                </Link>
-                <Link
-                  href="#process"
-                  className="text-slate-300 hover:text-orange-400 transition-colors font-semibold"
-                >
-                  Process
-                </Link>
-              </div> */}
             </div>
           </Reveal>
         </div>
