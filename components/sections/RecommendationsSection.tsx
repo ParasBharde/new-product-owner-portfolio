@@ -136,15 +136,15 @@ export function RecommendationsSection() {
   return (
     <section
       id="recommendations"
-      className="py-24 px-6 lg:px-12 bg-gradient-to-b from-stone-50 to-stone-100 overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-gradient-to-b from-stone-50 to-stone-100 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto mb-16">
+      <div className="max-w-7xl mx-auto mb-12 sm:mb-16">
         <Reveal>
-          <div className="text-center">
-            <h2 className="font-serif text-5xl text-stone-900 mb-4">
+          <div className="text-center px-4">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-stone-900 mb-4">
               What People Say
             </h2>
-            <p className="text-stone-600 text-lg max-w-2xl mx-auto">
+            <p className="text-stone-600 text-base sm:text-lg max-w-2xl mx-auto">
               Testimonials from colleagues, clients, and partners who've
               experienced the impact firsthand.
             </p>
@@ -166,19 +166,19 @@ export function RecommendationsSection() {
                 className="flex-shrink-0 w-[400px] h-[450px] flex flex-col bg-white rounded-2xl p-8 shadow-xl border border-stone-200 hover:shadow-2xl hover:scale-105 hover:border-orange-500/50 transition-all duration-300 group"
               >
                 {/* Quote Icon */}
-                <div className="mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <Quote className="w-6 h-6 text-white" fill="currentColor" />
                 </div>
 
                 {/* Content */}
-                <div className="flex-grow overflow-y-auto mb-6 pr-2">
-                  <p className="text-stone-700 leading-relaxed text-base italic">
+                <div className="flex-grow overflow-y-auto mb-6 pr-2 scrollbar-thin scrollbar-thumb-stone-300 scrollbar-track-transparent">
+                  <p className="text-stone-700 leading-relaxed text-base italic break-words">
                     "{recommendation.content}"
                   </p>
                 </div>
 
                 {/* Author Info */}
-                <div className="flex items-center gap-4 border-t border-stone-200 pt-6">
+                <div className="flex items-center gap-4 border-t border-stone-200 pt-6 flex-shrink-0">
                   {/* Avatar */}
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-purple-500 flex items-center justify-center shadow-md flex-shrink-0">
                     <span className="text-white font-bold text-lg">
@@ -187,7 +187,7 @@ export function RecommendationsSection() {
                   </div>
 
                   {/* Name and Role */}
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <h4 className="text-stone-900 font-semibold text-base truncate">
                       {recommendation.name}
                     </h4>
@@ -215,7 +215,7 @@ export function RecommendationsSection() {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className="relative h-[500px] overflow-hidden cursor-grab active:cursor-grabbing"
+          className="relative h-[520px] sm:h-[500px] overflow-hidden cursor-grab active:cursor-grabbing"
         >
           {/* Navigation Arrows */}
           <button
@@ -226,7 +226,7 @@ export function RecommendationsSection() {
             className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-stone-100 text-stone-600 hover:text-orange-600 hover:bg-white transition-all duration-300"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
@@ -237,7 +237,7 @@ export function RecommendationsSection() {
             className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-stone-100 text-stone-600 hover:text-orange-600 hover:bg-white transition-all duration-300"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -255,44 +255,49 @@ export function RecommendationsSection() {
               className="absolute inset-0 flex items-center justify-center px-4"
             >
               <div className="w-full max-w-md">
-                <div className="bg-white rounded-2xl p-8 shadow-xl border border-stone-200 h-[420px] flex flex-col">
+                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-stone-200 min-h-[440px] max-h-[440px] flex flex-col">
                   {/* Quote Icon */}
-                  <div className="flex-shrink-0 mb-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <Quote className="w-6 h-6 text-white" fill="currentColor" />
+                  <div className="flex-shrink-0 mb-4 sm:mb-6 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <Quote
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                      fill="currentColor"
+                    />
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-grow  mb-6 pr-2">
-                    <p className="text-stone-700 leading-relaxed text-base italic">
+                  {/* Content - Scrollable area */}
+                  <div className="flex-1 overflow-y-auto mb-4 sm:mb-6 pr-2 scrollbar-thin scrollbar-thumb-stone-300 scrollbar-track-transparent">
+                    <p className="text-stone-700 leading-relaxed text-sm sm:text-base italic break-words hyphens-auto">
                       "{RECOMMENDATIONS[currentIndex].content}"
                     </p>
                   </div>
 
                   {/* Author Info */}
-                  <div className="flex-shrink-0 flex items-center gap-4 border-t border-stone-200 pt-6">
+                  <div className="flex-shrink-0 flex items-center gap-3 sm:gap-4 border-t border-stone-200 pt-4 sm:pt-6">
                     {/* Avatar */}
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-purple-500 flex items-center justify-center shadow-md flex-shrink-0">
-                      <span className="text-white font-bold text-lg">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-orange-400 to-purple-500 flex items-center justify-center shadow-md flex-shrink-0">
+                      <span className="text-white font-bold text-base sm:text-lg">
                         {RECOMMENDATIONS[currentIndex].name.charAt(0)}
                       </span>
                     </div>
 
                     {/* Name and Role */}
-                    <div className="min-w-0">
-                      <h4 className="text-stone-900 font-semibold text-base truncate">
+                    <div className="min-w-0 flex-1">
+                      <h4 className="text-stone-900 font-semibold text-sm sm:text-base truncate">
                         {RECOMMENDATIONS[currentIndex].name}
                       </h4>
-                      <p className="text-stone-600 text-sm truncate">
+                      <p className="text-stone-600 text-xs sm:text-sm break-words line-clamp-2">
                         {RECOMMENDATIONS[currentIndex].role} at{" "}
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                          }}
-                          className="hover:text-orange-600 transition-colors"
-                        >
-                          {RECOMMENDATIONS[currentIndex].company}
-                        </button>
+                        <span className="inline-block">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}
+                            className="hover:text-orange-600 transition-colors"
+                          >
+                            {RECOMMENDATIONS[currentIndex].company}
+                          </button>
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -302,7 +307,7 @@ export function RecommendationsSection() {
           </AnimatePresence>
 
           {/* Mobile Indicators */}
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 px-4">
             {RECOMMENDATIONS.map((_, index) => (
               <button
                 key={index}
@@ -312,10 +317,10 @@ export function RecommendationsSection() {
                   setIsAutoPlaying(false);
                   setTimeout(() => setIsAutoPlaying(true), 2000);
                 }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? "bg-orange-500 w-8"
-                    : "bg-stone-300 hover:bg-stone-400"
+                    : "bg-stone-300 hover:bg-stone-400 w-2"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
