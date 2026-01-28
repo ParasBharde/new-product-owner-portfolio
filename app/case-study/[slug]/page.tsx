@@ -71,8 +71,7 @@ export default function CaseStudyPage() {
         <div
           className="absolute inset-0"
           style={{
-            background:
-              "radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)",
+            background:"radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)",
             transform: `translateY(${scrollY * 0.2}px)`,
           }}
         />
@@ -80,8 +79,7 @@ export default function CaseStudyPage() {
         <div
           className="absolute inset-0"
           style={{
-            background:
-              "radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)",
+            background:"radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)",
             transform: `translateY(${scrollY * 0.25}px)`,
           }}
         />
@@ -174,15 +172,6 @@ export default function CaseStudyPage() {
             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
-
-        {/* Back button */}
-        {/* <Link
-          href="/#work"
-          className="absolute top-8 left-8 flex items-center gap-2 text-white/80 hover:text-white transition-colors z-20 group"
-        >
-          <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
-          <span className="font-medium">Back to Work</span>
-        </Link> */}
       </section>
 
       {/* Content Section with Parallax Layers */}
