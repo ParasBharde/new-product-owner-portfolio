@@ -91,6 +91,7 @@ export const HERO = {
  */
 export const PHILOSOPHY = {
   name: portfolioData.personal.name,
+  quote: portfolioData.personal.quote,
   tagline: portfolioData.personal.role,
   title: portfolioData.philosophy.title,
   subtitle: portfolioData.philosophy.subtitle,

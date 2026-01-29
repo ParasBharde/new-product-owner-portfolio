@@ -138,7 +138,7 @@ export function AboutSection() {
                     transition={{ delay: 0.4, duration: 0.8 }}
                   >
                     <p className="text-stone-700 text-xl md:text-2xl font-serif italic leading-relaxed">
-                      {quoteText.split(" ").map((word, index) => (
+                      {PHILOSOPHY.quote.split(" ").map((word, index) => (
                         <motion.span
                           key={index}
                           className="inline-block mr-[0.3em]"
