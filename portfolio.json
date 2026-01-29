@@ -6,7 +6,8 @@
     "location": "India 🇮🇳",
     "experience": "20+ Years",
     "tagline": "Helping teams build better products through Agile thinking.",
-    "description": "Founder and Agile practitioner focused on organizational agility, leadership, and product execution."
+    "description": "Founder and Agile practitioner focused on organizational agility, leadership, and product execution.",
+    "quote":"The best products come from the right mix of people, tools, and processes—not from having the best of all. I make that mix happen."
   },
   "seo": {
     "title": "Vijay Wade - Agile Coach & Founder",
@@ -158,234 +159,115 @@
   "recommendations": [
     {
       "id": "1",
-      "name": "Gaurav Srivastav",
-      "role": "Sr. Engineering Manager",
+      "name": "Mohit Agrawal",
+      "role": "Principal Software Engineering Manager",
       "company": "Microsoft",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, where he reported to me as a Software Developer. Vijay is an exceptionally talented engineer with a strong foundation in both backend and frontend development. His ability to design scalable systems and write clean, maintainable code consistently impressed me. What sets Vijay apart is his proactive approach to problem-solving and his eagerness to take on challenging tasks. He demonstrated excellent collaboration skills, working seamlessly with cross-functional teams to deliver high-quality products on time. Vijay is also a quick learner who stays updated with the latest technologies and best practices. I highly recommend Vijay for any software development role. He would be a valuable asset to any team."
+      "content": "I got an opportunity though a short one to work with Vijay @ BNYM Technology (Inautix). It was a great learning experience for me since Vijay has a vast experience helping different companies across multiple domains on there Agile journey. His ability to connect with different age group kept amazing me. Whether it is working with stakeholders, PO or scrum masters. Vijay is also an effective trainer on various Agile frameworks like Kanban, Scrum, Nexus etc. Looking forward to working with you again. Wishing you the very best for all your future and present endeavors."
     },
     {
       "id": "2",
-      "name": "Ajit Shingate",
-      "role": "Lead Product Developer",
-      "company": "Persistent Systems",
-      "content": "I had the privilege of working with Vijay Wade at Persistent Systems, and I can confidently say that he is one of the most talented and dedicated professionals I have had the pleasure of collaborating with. Vijay possesses a rare combination of technical expertise, problem-solving skills, and a genuine passion for software development. His ability to quickly grasp complex concepts and translate them into efficient, scalable solutions is truly impressive."
+      "name": "Miranda FOUCAULT",
+      "role": "Change lead & operational excellence partner",
+      "company": "Roche, Société Générale",
+      "content": "Vijay facilitated the main session of our recent seminar with the leadership team. The whole experience from preparation to wrap-up went very smoothly. The way he designed the workshop and set-up the room as a kanban enabled us to stay focused on our end-goal. His facilitation style is very pleasant, he brings good en-ergy and gives a lot of importance to the stakeholders. It was a pleasure working with him!"
     },
     {
       "id": "3",
-      "name": "Sahil Singh",
-      "role": "Senior Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent, and I can confidently say he's a natural problem solver with strong coding skills. He approaches challenges with a calm, thoughtful mindset and consistently delivers clean, efficient solutions. What really stands out is his ability to collaborate effectively—he's always willing to help and brings positive energy to the team."
+      "name": "Nelson Navas",
+      "role": "Test Engineering Manager",
+      "company": "HMS Networks",
+      "content": "Vijay is very knowledgeable in agile and software development methodologies, with a wealth of experience to share. I recommend Vijay as a trainer, facilitator, and consultant."
     },
     {
       "id": "4",
-      "name": "Pooja Wani",
+      "name": "John Cheetham",
       "role": "Senior Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I have worked with Vijay at Persistent Systems, and I can say that his proficiency in backend, frontend, and cloud technologies like AWS makes him an invaluable asset to any team. He consistently delivers robust and efficient solutions, and his approach to problem-solving is both innovative and practical. I highly recommend Vijay for any challenging software development role."
+      "company": "Red Lion Controls",
+      "content": "Our teams attended Agile Training presented by Vijay Wade. We already include many Agile characteristics in our software development cycle. Vijay gave us many ways to improve our process. I hope to soon make changes based on this training."
     },
     {
       "id": "5",
-      "name": "Mukund Tanksale",
-      "role": "Senior Engineer",
-      "company": "Barclays",
-      "content": "I had the pleasure of collaborating with Vijay at Persistent, and his ability to solve complex problems with innovative solutions truly stood out. He brings a perfect balance of technical expertise, strategic thinking, and hands-on execution. His collaborative mindset and commitment to excellence make him a valuable asset to any team. I highly recommend Vijay for roles that demand both technical depth and strong problem-solving skills."
+      "name": "Joel S.",
+      "role": "Digital transformation Fanatic, Market Place Prophet and Agile Evangelist",
+      "company": "SAFe Courses ",
+      "content": "I attended and Participated in Kanban training KMP 1 and 2. Vijay is a very seasoned professional with lot of experience under his belt and is able to connect his trainees with real time scenarios as he masterfully goes through the course content and keep you engaged in the class throughout. I highly recommend Vijay for his training. He also is a great guy to talk too. Highly recommend any training from Vijay. Thanks Vijay!"
     },
     {
       "id": "6",
-      "name": "Tanmay Bhole",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "Working with Vijay at Persistent Systems was truly a rewarding experience. His expertise in full-stack development, particularly in React, Node.js, and AWS, is exceptional. Vijay has a remarkable ability to tackle complex problems with innovative solutions while maintaining clean and efficient code. What stands out most is his collaborative spirit and eagerness to share knowledge with the team. He's always willing to help and brings a positive, solution-oriented mindset to every challenge. I highly recommend Vijay for any software development role—he's a skilled engineer and a great team player."
+      "name": "Volker Glaeske",
+      "role": "Business Executive & Change Agent",
+      "company": "Driving Agile Business Operations, IT Strategy, and Culture Transformation",
+      "content": "Vijay has got a very broad knowledge of all agile practices and is one of the best Kanban trainers that I came across in my professional life. I had a great learning experience during the Kanban workshop, thanks to his engaging personality and his excellent communication skills. He is able to visualise the key concepts of Kanban and can always support them with real-life examples due to his profound working experience."
     },
     {
       "id": "7",
-      "name": "Shubham Alone",
-      "role": "Software Development Engineer",
-      "company": "Samsung R&D Institute India",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, where his technical expertise and problem-solving abilities truly stood out. Vijay is highly skilled in full-stack development, with a strong command of technologies like React, Node.js, and AWS. He consistently delivered high-quality, scalable solutions and was always ready to tackle complex challenges with a positive and collaborative attitude. His dedication to continuous learning and his ability to mentor others make him a valuable asset to any team. I highly recommend Vijay for any software engineering role."
+      "name": "Muhammad F. Sinaga",
+      "role": "Head of AI @ Google Cloud Indonesia | Generative AI Specialist | Business Analytics Expert | Enterprise Agile Coach & Trainer @ SAFe® | Doctorate Degree in IT (UK) | 330+ Certificates",
+      "company": "Google Cloud Indonesia",
+      "content": "Vijay Wade proved to be one of the most committed Kanban professionals that I have ever met. He amazed me with his practical insights and unique training methods to solving various Kanban problems. Vijay Wade is an experienced and accountable Kanban Trainer and he maintains good relations with his past clients. I learned Kanban a lot from him and I do hope to be able to take further Kanban training sessions with him in the future. I certainly would recommend Vijay for your Kanban training needs."
     },
     {
       "id": "8",
-      "name": "Mohammad Athar",
-      "role": "Software Development Engineer-II",
-      "company": "Turbot",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems Limited, and I can confidently say he is an exceptional Software Development Engineer. Vijay's expertise in React, Node.js, and cloud technologies like AWS is truly impressive. He consistently delivered high-quality, scalable solutions and demonstrated a deep understanding of both frontend and backend development. What sets Vijay apart is his problem-solving mindset and ability to collaborate effectively with cross-functional teams. He is always eager to learn, adapt to new technologies, and mentor his peers. His strong work ethic, technical proficiency, and positive attitude make him a valuable asset to any team. I highly recommend Vijay for any software engineering role."
+      "name": "Sumit Pawar",
+      "role": "Lead Data Architect",
+      "company": "TATA Motors",
+      "content": "I attended Vijay's KSD course. Vijay has in-depth knowledge of the subject and explains problem very clearly relating it with multiple real life use cases from his experience. His classes are always full of learnings and lot of take aways. His teaching methodology maps with the course content very accurately. I would really recommend Vijay for anyone looking for Kanban or starting with agile methodology."
     },
     {
       "id": "9",
-      "name": "AMIT KUMAR",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an outstanding software engineer. His expertise in full-stack development, particularly in React, Node.js, and AWS, is exceptional. Vijay has a strong ability to design and implement scalable, efficient solutions while maintaining high code quality. What truly sets him apart is his problem-solving mindset and collaborative approach. He is always willing to help teammates, share knowledge, and take ownership of challenging tasks. His dedication, technical skills, and positive attitude make him a valuable asset to any team. I highly recommend Vijay for any software development role."
+      "name": "Arjun Nehra",
+      "role": "Deputy General Manager",
+      "company": "HCLTech",
+      "content": "I recently attended a Kanban virtual class given by Vijay. I was very impressed by the way he conducted the virtual sessions and how he kept the class fully engaged throughout. He was extremely good at giving real-life examples for explaining the Kanban concepts. And, we spent almost half of the class doing Simulations and practices exercises which really crystallized the concept of \"Flow\" for me. Vijay's class exceeded my ex-pectations. :) Thanks a lot Vijay!"
     },
     {
       "id": "10",
-      "name": "Yash Pathak",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "Vijay is an exceptional software engineer with deep expertise in full-stack development. His proficiency in React, Node.js, and AWS, combined with his ability to deliver scalable and efficient solutions, makes him a valuable asset to any team. He approaches challenges with a problem-solving mindset and consistently maintains high code quality. Beyond his technical skills, Vijay is a great collaborator who is always willing to share knowledge and support his teammates. I highly recommend him for any software development role."
+      "name": "Mahendra Yadav",
+      "role": "Senior Software Engineer at ServiceNow | Full Stack Developer",
+      "company": "ServiceNow",
+      "content": "Vijay has a very unique teaching skill. we attended his Scrum training session in which he has used different ways to pass on the knowledge through fun activities instead of presentations."
     },
     {
       "id": "11",
-      "name": "Ganesh M",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the privilege of working with Vijay at Persistent Systems, and I can confidently say that he is an exceptional software engineer. His expertise in React, Node.js, and AWS is truly impressive, and he consistently delivers high-quality, scalable solutions. Vijay has a strong problem-solving mindset and a deep understanding of both frontend and backend development. What sets him apart is his ability to collaborate effectively, take ownership of challenging tasks, and mentor his peers. His dedication, technical proficiency, and positive attitude make him a valuable asset to any team. I highly recommend Vijay for any software engineering role."
+      "name": "Ravi Bhim",
+      "role": "CEO & Founder",
+      "company": "BeautifulCode",
+      "content": "At the core, Agile boils down to a few core concepts - Estimating the tasks, Operational Discipline, Team Dynamics, Iterative Mindset, etc... Vijay has helped us understand how these concepts have a direct effect on the eventual success of the team through practical approaches such as games and discussions. These learnings are going to stick with me because of the way they were delivered - and thats why Vijay is the real deal."
     },
     {
       "id": "12",
-      "name": "Vivek Bhadane",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an outstanding software development engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated a strong ability to tackle complex problems with efficiency and precision. What sets Vijay apart is his collaborative approach and eagerness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role—he would be a great addition to any team!"
+      "name": "Ajitesh Prakash",
+      "role": "Project and Delivery Management | Scrum Master and Agile Coach | SAFe Agilist | Kanban and Lean evangelist",
+      "company": "February 10, 2020, Ajitesh left Athi directly",
+      "content": "Got a chance to be a part of SAFe 5.0 training conducted by Vijay. I appreciate the knowledge that he has around Agile, Lean, SAFe, Kanban and DevOps. He has been around, seen the changing times in the Agile world and his understanding of the subject speaks volumes about his experience. Very patient with all the queries, he would always listen to the other point of view before nudging you in the right direction. His passion to educate people on these topics is illustrated by how he kept the training engaging for a period of 2 days and kept everyone on their toes. I would definitely recommend Vijay for any agile education."
     },
     {
       "id": "13",
-      "name": "Shrikant M.",
-      "role": "Software Development Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say that he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions while maintaining a strong focus on code quality and best practices. What truly sets Vijay apart is his problem-solving mindset and his ability to collaborate effectively with cross-functional teams. He is always eager to learn, adapt to new technologies, and share his knowledge with others. His dedication, technical skills, and positive attitude make him a valuable asset to any team. I highly recommend Vijay for any software development role."
+      "name": "Yash Todi",
+      "role": "Engineering Lead",
+      "company": "Ten Lifestyle Group",
+      "content": "I was fortunate to receive a two day training from Mr. Vijay at BeautifulCode, Hyderabad. The learning was fun and I am not sure if 'training' would be the appropriate term to describe it. The theory sessions were very interactive and the games that followed every session vindicated the theories. By the end of the second day our thought process was deeply influenced and the lessons learnt. I would request him to keep up the good work and wish him all the very best for his future endeavours."
     },
     {
       "id": "14",
-      "name": "Tejas Bhalekar",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly commendable. Vijay consistently delivered high-quality, scalable solutions and demonstrated a strong ability to solve complex problems with efficiency and creativity. What sets Vijay apart is his collaborative spirit and willingness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
+      "name": "Pranav Kumar PB",
+      "role": "Senior Machine Learning Engineer",
+      "company": "",
+      "content": "I attended SCRUM & Agile 2 day training from Vijay. He made the learning experience very fun and activity oriented. Really loved his approach of teaching. His grip on the subjects of scrum, agile and kanban are extraordinary. He helped us break a lot of assumptions we had about being agile. I'll be using the skills he taught throughout my carrer."
     },
     {
       "id": "15",
-      "name": "Aniket M.",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the privilege of working with Vijay at Persistent Systems, and I can confidently say that he is an outstanding software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay has a remarkable ability to design and implement scalable, efficient solutions while maintaining high code quality. What truly sets Vijay apart is his problem-solving mindset and his collaborative approach. He is always eager to learn, adapt to new technologies, and share his knowledge with teammates. His dedication, technical proficiency, and positive attitude make him an invaluable asset to any team. I highly recommend Vijay for any software development role."
+      "name": "Subrahmaniam S.R.V",
+      "role": "Build High Performance Culture & Unleash Innovation: Your Transformation Partner",
+      "company": "",
+      "content": "I have had the pleasure of working with Vijay - first in Siemens and then in an other coaching engagement as a fellow coach. Just around the time world Scaling was getting famous in the Agile World; Vijay and his team in Siemens were practicing CI @ Scale in their large agile program. That was in 2013. Then I got to work with him closely in the coaching engagement and that is where I saw his soft skills usage at its best. Patient / Persuasive / Persevering to help get teams better."
     },
     {
       "id": "16",
-      "name": "Nitin Rajput",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an exceptional software engineer. His proficiency in full-stack development, especially with React, Node.js, and AWS, is outstanding. Vijay consistently delivered high-quality, scalable solutions and demonstrated a strong ability to solve complex technical challenges. What truly sets Vijay apart is his collaborative mindset and willingness to share knowledge with the team. He is not only technically skilled but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "17",
-      "name": "Tanmay Kamble",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an outstanding software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated exceptional problem-solving skills. What sets Vijay apart is his collaborative approach and eagerness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, strong work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "18",
-      "name": "Tejas Deshpande",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say that he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated a strong ability to tackle complex challenges with efficiency and precision. What truly sets Vijay apart is his problem-solving mindset and his collaborative approach. He is always eager to learn, share knowledge, and support his teammates. His dedication, technical proficiency, and positive attitude make him a valuable asset to any team. I highly recommend Vijay for any software development role."
-    },
-    {
-      "id": "19",
-      "name": "Rahul Ingole",
-      "role": "Senior Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated a strong problem-solving mindset. What sets Vijay apart is his collaborative spirit and eagerness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "20",
-      "name": "Vishal Mohite",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an outstanding software engineer. His expertise in full-stack development, especially with React, Node.js, and AWS, is remarkable. Vijay consistently delivered high-quality, scalable solutions while demonstrating strong problem-solving abilities and attention to detail. What truly sets Vijay apart is his collaborative mindset and willingness to mentor teammates. He is always eager to share knowledge, help others, and contribute to the team's success. His technical skills, dedication, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software development role!"
-    },
-    {
-      "id": "21",
-      "name": "Sonal Kamble",
-      "role": "Project Manager",
-      "company": "Persistent Systems",
-      "content": "I have had the pleasure of working with Vijay at Persistent Systems. He is hardworking, dedicated, and always eager to take on new challenges. His strong technical skills, combined with his willingness to learn and adapt, make him a reliable and valuable team member. Vijay is not only skilled in his work but also a great collaborator who contributes positively to the team. I have no doubt that he will continue to excel in his career. I highly recommend Vijay for any software development role."
-    },
-    {
-      "id": "22",
-      "name": "Ganesh Girase",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I've had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he's an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated excellent problem-solving skills. What stands out most is his collaborative attitude and willingness to share knowledge with the team. He's not just technically proficient but also a great mentor and team player. His dedication, work ethic, and positive mindset make him a valuable addition to any team. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "23",
-      "name": "Ajit Kolekar",
-      "role": "Senior Software Engineer",
-      "company": "Persistent Systems",
-      "content": "Vijay is an exceptional software engineer with expertise in full-stack development, particularly React, Node.js, and AWS. His ability to deliver scalable, high-quality solutions while maintaining strong code standards is impressive. A great problem solver and collaborator, Vijay is always willing to share knowledge and support his team. I highly recommend him for any software development role."
-    },
-    {
-      "id": "24",
-      "name": "Avinash Avhad",
-      "role": "Senior Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the privilege of working with Vijay at Persistent Systems, and I can confidently say he is an outstanding software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated strong problem-solving abilities. What sets Vijay apart is his collaborative approach and willingness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "25",
-      "name": "Akash Kakade",
-      "role": "Senior Software Engineer",
-      "company": "IBM",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an outstanding software engineer. His expertise in full-stack development, especially with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated excellent problem-solving skills. What sets Vijay apart is his collaborative spirit and eagerness to share knowledge with teammates. He is not only technically skilled but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any team. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "26",
-      "name": "Vaibhav Londhe",
-      "role": "Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated strong problem-solving abilities. What sets Vijay apart is his collaborative mindset and eagerness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "27",
-      "name": "Akshay Jagtap",
-      "role": "Software Engineer",
-      "company": "TATA Consultancy Services",
-      "content": "I had the pleasure of working alongside Vijay at Persistent, and I can confidently say he is an exceptional software engineer. His proficiency in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions while maintaining a strong focus on code quality and best practices. What truly sets him apart is his collaborative spirit and problem-solving mindset. He is always eager to share knowledge, mentor teammates, and tackle complex challenges with a positive attitude. His dedication, technical expertise, and teamwork make him an invaluable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "28",
-      "name": "Pramod Dalavi",
-      "role": "Analyst - Software Engineering",
-      "company": "Goldman Sachs",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated strong problem-solving skills. What sets Vijay apart is his collaborative approach and eagerness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "29",
-      "name": "Sagar Gawande",
-      "role": "Member of Technical Staff",
-      "company": "RapidFort",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an outstanding software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions while demonstrating excellent problem-solving skills. What sets Vijay apart is his collaborative mindset and willingness to mentor teammates. He is always eager to share knowledge and contribute to the team's success. His dedication, technical proficiency, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "30",
-      "name": "Kiran Gade",
-      "role": "Software Engineer",
-      "company": "Atlassian",
-      "content": "Vijay is a highly skilled software engineer with a strong command of full-stack development. His expertise in React, Node.js, and AWS, combined with his ability to deliver scalable and efficient solutions, makes him stand out. He consistently demonstrates excellent problem-solving abilities and maintains high code quality. Beyond his technical skills, Vijay is a fantastic collaborator who is always willing to share his knowledge and support his teammates. I highly recommend him for any software development position."
-    },
-    {
-      "id": "31",
-      "name": "Amey Deshpande",
-      "role": "Senior Software Engineer",
-      "company": "Persistent Systems",
-      "content": "I had the privilege of working with Vijay at Persistent Systems, and I can confidently say he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly impressive. Vijay consistently delivered high-quality, scalable solutions and demonstrated a strong ability to solve complex problems with efficiency and creativity. What sets Vijay apart is his collaborative mindset and willingness to share knowledge with teammates. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "32",
-      "name": "Yogesh Singh",
-      "role": "Software Engineer II",
-      "company": "Autodesk",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, and I can confidently say he is an exceptional software engineer. His expertise in full-stack development, particularly with React, Node.js, and AWS, is truly commendable. Vijay consistently delivered high-quality, scalable solutions and demonstrated strong problem-solving abilities. What sets Vijay apart is his collaborative spirit and eagerness to share knowledge with the team. He is not only technically proficient but also a great mentor and team player. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
-    },
-    {
-      "id": "33",
-      "name": "Ravindra Fulari",
-      "role": "Senior Software Engineer",
-      "company": "Trellix",
-      "content": "I had the pleasure of working with Vijay at Persistent Systems, where his technical expertise and collaborative spirit truly stood out. Vijay is a skilled full-stack developer with deep knowledge of React, Node.js, and AWS. He consistently delivered high-quality, scalable solutions and demonstrated excellent problem-solving abilities. What makes Vijay exceptional is his willingness to share knowledge, mentor teammates, and contribute to the team's success. His dedication, work ethic, and positive attitude make him a valuable asset to any organization. I highly recommend Vijay for any software engineering role!"
+      "name": "Sachin Nirmal",
+      "role": "VP | Senior Release Train Engineer at BNY | Data & Analytics Solutions",
+      "company": "BNY",
+      "content": "Vijay worked with me as a Agile Coach. As we were already following Scrum development in our project, he initially worked with us and observed the way in which we work. After that he provided some valuable feedback which helped me to conduct scrum effectively. I especially liked his way to gel within the team and identify any issues which are hampering team's performance. He is also master in conducting Sprint Retrospectives. He has lot of tools and techniques which he describes to the team during retrospective. It helps team to identify any impediments and see if there is any way to improve the performance. Wishing him all the best for his future endeavors !!"
     }
   ],
   "social": [

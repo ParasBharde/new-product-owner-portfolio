@@ -77,7 +77,8 @@ export default function CaseStudyPage() {
         <div
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)",
+            background:
+              "radial-gradient(circle at 30% 50%, rgba(251, 146, 60, 0.15), transparent 50%)",
             transform: `translateY(${scrollY * 0.2}px)`,
           }}
         />
@@ -85,7 +86,8 @@ export default function CaseStudyPage() {
         <div
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)",
+            background:
+              "radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.1), transparent 50%)",
             transform: `translateY(${scrollY * 0.25}px)`,
           }}
         />
@@ -276,7 +278,7 @@ export default function CaseStudyPage() {
                     transition={{ delay: index * 0.15 }}
                   >
                     <ParallaxSection
-                      speed={0.08 + index * 0.03}
+                      speed={0.02 + index * 0.01}
                       className="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                     >
                       <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mb-4">
@@ -294,7 +296,7 @@ export default function CaseStudyPage() {
                       </p>
                     </ParallaxSection>
                   </motion.div>
-                )
+                ),
               )}
             </div>
           </div>
@@ -379,7 +381,7 @@ export default function CaseStudyPage() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.25 }}
               >
-                <ParallaxSection speed={0.25}>
+                <ParallaxSection speed={0.2}>
                   <div className="bg-gradient-to-br from-orange-600 to-orange-700 p-8 md:p-12 rounded-2xl shadow-xl text-white hover:shadow-2xl transition-shadow duration-300">
                     <h3 className="text-2xl font-semibold mb-4">Key Results</h3>
                     <p className="text-orange-100 mb-6 leading-relaxed">
@@ -476,18 +478,29 @@ export default function CaseStudyPage() {
                     <motion.div
                       className="absolute -top-4 -right-4 w-20 h-20 border border-orange-500/30 rounded-full"
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     />
                     <motion.div
                       className="absolute -bottom-4 -left-4 w-16 h-16 border border-purple-500/20 rounded-full"
                       animate={{ rotate: -360 }}
-                      transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 15,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     />
 
                     {/* Project number */}
                     <div className="relative text-center py-16 px-8 bg-gradient-to-br from-stone-800/50 to-stone-900/50 backdrop-blur-sm rounded-2xl border border-stone-700/50">
                       <span className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-orange-500 via-orange-400 to-purple-500 bg-clip-text text-transparent">
-                        {String((currentIndex + 2) % PROJECTS.length || PROJECTS.length).padStart(2, "0")}
+                        {String(
+                          (currentIndex + 2) % PROJECTS.length ||
+                            PROJECTS.length,
+                        ).padStart(2, "0")}
                       </span>
                       <p className="text-stone-500 font-mono text-xs uppercase tracking-widest mt-4">
                         {nextProject.category}
@@ -512,7 +525,9 @@ export default function CaseStudyPage() {
                   href="/#work"
                   className="inline-flex items-center gap-2 text-stone-400 hover:text-orange-400 transition-colors group"
                 >
-                  <span className="font-mono text-sm">Explore All Projects</span>
+                  <span className="font-mono text-sm">
+                    Explore All Projects
+                  </span>
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </motion.div>

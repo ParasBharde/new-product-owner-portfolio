@@ -2,14 +2,15 @@
 
 import { Reveal } from "@/components/ui/Reveal";
 import { motion } from "framer-motion";
-import { PHILOSOPHY, PRINCIPLES } from "@/lib/constants";
+import { HERO, PHILOSOPHY, PRINCIPLES } from "@/lib/constants";
 import { Quote, Sparkles } from "lucide-react";
 
 /**
  * About/Philosophy section explaining the approach and values
  */
 export function AboutSection() {
-  const quoteText = "Working with this professional has been transformative for our team. Their attention to detail and creative problem-solving helped us launch our product ahead of schedule.";
+  const quoteText =
+    "The best products come from the right mix of people, tools, and processes—not from having the best of all. I make that mix happen.";
 
   return (
     <section
@@ -95,9 +96,16 @@ export function AboutSection() {
                     rotate: [-5, 5, -5],
                     scale: [1, 1.05, 1],
                   }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 >
-                  <Quote className="w-24 h-24 md:w-32 md:h-32" strokeWidth={1} />
+                  <Quote
+                    className="w-24 h-24 md:w-32 md:h-32"
+                    strokeWidth={1}
+                  />
                 </motion.div>
 
                 {/* Content */}
@@ -116,7 +124,7 @@ export function AboutSection() {
                     <div className="flex items-center gap-1.5">
                       <Sparkles className="w-4 h-4 text-orange-500" />
                       <span className="text-xs font-mono text-orange-600 uppercase tracking-wider">
-                        Testimonial
+                        {PHILOSOPHY.name}
                       </span>
                     </div>
                   </motion.div>
@@ -130,7 +138,7 @@ export function AboutSection() {
                     transition={{ delay: 0.4, duration: 0.8 }}
                   >
                     <p className="text-stone-700 text-xl md:text-2xl font-serif italic leading-relaxed">
-                      {quoteText.split(' ').map((word, index) => (
+                      {PHILOSOPHY.quote.split(" ").map((word, index) => (
                         <motion.span
                           key={index}
                           className="inline-block mr-[0.3em]"
@@ -158,8 +166,9 @@ export function AboutSection() {
                   >
                     <div className="w-px h-12 bg-gradient-to-b from-orange-500 to-purple-500" />
                     <div>
-                      <p className="font-semibold text-stone-900">Satisfied Client</p>
-                      <p className="text-sm text-stone-500">Product Team Lead</p>
+                      <p className="font-semibold text-stone-900">
+                        {PHILOSOPHY.tagline}
+                      </p>
                     </div>
                   </motion.div>
                 </div>
@@ -203,7 +212,8 @@ export function AboutSection() {
       {/* Gradient border animation styles */}
       <style jsx>{`
         @keyframes gradient-border {
-          0%, 100% {
+          0%,
+          100% {
             background-position: 0% 50%;
           }
           50% {
