@@ -107,7 +107,7 @@ export function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24">
         {/* Main CTA Section */}
         <div className="mb-24 text-center">
-          <ParallaxSection speed={0.3}>
+          <ParallaxSection speed={0.1}>
             <Reveal>
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-orange-500/30 backdrop-blur-sm border border-orange-500/50 rounded-full shadow-lg">
                 <Sparkles className="w-4 h-4 text-orange-300" />
