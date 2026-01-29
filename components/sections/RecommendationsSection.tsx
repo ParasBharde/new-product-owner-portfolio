@@ -4,7 +4,13 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { RECOMMENDATIONS } from "@/lib/constants";
 import { Quote, ChevronLeft, ChevronRight, Star, Sparkles } from "lucide-react";
-import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useTransform,
+  useSpring,
+} from "framer-motion";
 
 export function RecommendationsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,19 +23,34 @@ export function RecommendationsSection() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const parallaxX = useSpring(useTransform(mouseX, [-500, 500], [-30, 30]), { stiffness: 50, damping: 20 });
-  const parallaxY = useSpring(useTransform(mouseY, [-500, 500], [-30, 30]), { stiffness: 50, damping: 20 });
-  const parallaxX2 = useSpring(useTransform(mouseX, [-500, 500], [20, -20]), { stiffness: 30, damping: 25 });
-  const parallaxY2 = useSpring(useTransform(mouseY, [-500, 500], [20, -20]), { stiffness: 30, damping: 25 });
+  const parallaxX = useSpring(useTransform(mouseX, [-500, 500], [-30, 30]), {
+    stiffness: 50,
+    damping: 20,
+  });
+  const parallaxY = useSpring(useTransform(mouseY, [-500, 500], [-30, 30]), {
+    stiffness: 50,
+    damping: 20,
+  });
+  const parallaxX2 = useSpring(useTransform(mouseX, [-500, 500], [20, -20]), {
+    stiffness: 30,
+    damping: 25,
+  });
+  const parallaxY2 = useSpring(useTransform(mouseY, [-500, 500], [20, -20]), {
+    stiffness: 30,
+    damping: 25,
+  });
 
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    mouseX.set(e.clientX - centerX);
-    mouseY.set(e.clientY - centerY);
-  }, [mouseX, mouseY]);
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      mouseX.set(e.clientX - centerX);
+      mouseY.set(e.clientY - centerY);
+    },
+    [mouseX, mouseY],
+  );
 
   // Get visible cards (current + neighbors)
   const getVisibleIndices = useCallback(() => {
@@ -154,7 +175,9 @@ export function RecommendationsSection() {
     rotateY: dir > 0 ? 45 : -45,
   });
 
-  const getCardPosition = (index: number): keyof typeof positionVariants | null => {
+  const getCardPosition = (
+    index: number,
+  ): keyof typeof positionVariants | null => {
     if (index === visibleIndices.prev2) return "prev2";
     if (index === visibleIndices.prev) return "prev";
     if (index === visibleIndices.current) return "center";
@@ -176,7 +199,8 @@ export function RecommendationsSection() {
         <motion.div
           className="absolute top-20 left-[10%] w-72 h-72 rounded-full opacity-30"
           style={{
-            background: "radial-gradient(circle, rgba(234,88,12,0.3) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(234,88,12,0.3) 0%, transparent 70%)",
             x: parallaxX,
             y: parallaxY,
           }}
@@ -184,7 +208,8 @@ export function RecommendationsSection() {
         <motion.div
           className="absolute bottom-20 right-[15%] w-96 h-96 rounded-full opacity-20"
           style={{
-            background: "radial-gradient(circle, rgba(168,85,247,0.25) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(168,85,247,0.25) 0%, transparent 70%)",
             x: parallaxX2,
             y: parallaxY2,
           }}
@@ -192,7 +217,8 @@ export function RecommendationsSection() {
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-10"
           style={{
-            background: "radial-gradient(circle, rgba(234,88,12,0.15) 0%, transparent 60%)",
+            background:
+              "radial-gradient(circle, rgba(234,88,12,0.15) 0%, transparent 60%)",
           }}
           animate={{
             scale: [1, 1.1, 1],
@@ -239,7 +265,7 @@ export function RecommendationsSection() {
           className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
+            backgroundSize: "60px 60px",
           }}
         />
       </div>
@@ -287,7 +313,11 @@ export function RecommendationsSection() {
               return (
                 <motion.div
                   key={`${recommendation.id}-${index}`}
-                  initial={direction > 0 ? positionVariants.next2 : positionVariants.prev2}
+                  initial={
+                    direction > 0
+                      ? positionVariants.next2
+                      : positionVariants.prev2
+                  }
                   animate={positionVariants[position]}
                   exit={getExitVariant(direction)}
                   transition={{
@@ -301,8 +331,13 @@ export function RecommendationsSection() {
                     transformStyle: "preserve-3d",
                     transformOrigin: "center center",
                   }}
-                  onClick={() => position === "center" && setExpandedCard(expandedCard === index ? null : index)}
-                  whileHover={position === "center" ? { scale: 1.02, y: -5 } : {}}
+                  onClick={() =>
+                    position === "center" &&
+                    setExpandedCard(expandedCard === index ? null : index)
+                  }
+                  whileHover={
+                    position === "center" ? { scale: 1.02, y: -5 } : {}
+                  }
                 >
                   {/* Card */}
                   <div
@@ -321,13 +356,24 @@ export function RecommendationsSection() {
                     {/* Animated quote decoration */}
                     <motion.div
                       className="absolute -top-4 -left-4 text-orange-200/40"
-                      animate={position === "center" ? {
-                        scale: [1, 1.1, 1],
-                        rotate: [-5, 5, -5],
-                      } : {}}
-                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                      animate={
+                        position === "center"
+                          ? {
+                              scale: [1, 1.1, 1],
+                              rotate: [-5, 5, -5],
+                            }
+                          : {}
+                      }
+                      transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
                     >
-                      <Quote className="w-20 h-20 md:w-24 md:h-24" strokeWidth={1} />
+                      <Quote
+                        className="w-20 h-20 md:w-24 md:h-24"
+                        strokeWidth={1}
+                      />
                     </motion.div>
 
                     {/* Content */}
@@ -339,7 +385,10 @@ export function RecommendationsSection() {
                         </div>
                         <div className="flex gap-0.5">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-orange-400 fill-orange-400" />
+                            <Star
+                              key={i}
+                              className="w-4 h-4 text-orange-400 fill-orange-400"
+                            />
                           ))}
                         </div>
                       </div>
@@ -355,14 +404,17 @@ export function RecommendationsSection() {
                         >
                           &ldquo;{recommendation.content}&rdquo;
                         </p>
-                        {position === "center" && recommendation.content.length > 200 && (
-                          <button
-                            className="mt-2 text-orange-600 text-sm font-medium hover:text-orange-700 transition-colors flex items-center gap-1"
-                          >
-                            {expandedCard === index ? "Show less" : "Read more"}
-                            <ChevronRight className={`w-4 h-4 transition-transform ${expandedCard === index ? "rotate-90" : ""}`} />
-                          </button>
-                        )}
+                        {position === "center" &&
+                          recommendation.content.length > 200 && (
+                            <button className="mt-2 text-orange-600 text-sm font-medium hover:text-orange-700 transition-colors flex items-center gap-1">
+                              {expandedCard === index
+                                ? "Show less"
+                                : "Read more"}
+                              <ChevronRight
+                                className={`w-4 h-4 transition-transform ${expandedCard === index ? "rotate-90" : ""}`}
+                              />
+                            </button>
+                          )}
                       </div>
 
                       {/* Author info */}
@@ -424,37 +476,31 @@ export function RecommendationsSection() {
 
       {/* Progress indicator */}
       <div className="flex justify-center items-center gap-3 mt-8 relative z-10">
-        <span className="text-stone-400 text-sm font-mono">
-          {String(currentIndex + 1).padStart(2, "0")}
-        </span>
         <div className="flex gap-1.5">
-          {RECOMMENDATIONS.slice(0, Math.min(10, RECOMMENDATIONS.length)).map((_, index) => (
-            <motion.button
-              key={index}
-              onClick={() => {
-                setDirection(index > currentIndex ? 1 : -1);
-                setCurrentIndex(index);
-                setIsAutoPlaying(false);
-                setTimeout(() => setIsAutoPlaying(true), 5000);
-              }}
-              className={`
+          {RECOMMENDATIONS.slice(0, Math.min(10, RECOMMENDATIONS.length)).map(
+            (_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => {
+                  setDirection(index > currentIndex ? 1 : -1);
+                  setCurrentIndex(index);
+                  setIsAutoPlaying(false);
+                  setTimeout(() => setIsAutoPlaying(true), 5000);
+                }}
+                className={`
                 h-2 rounded-full transition-all duration-300
-                ${index === currentIndex
-                  ? "w-8 bg-gradient-to-r from-orange-500 to-orange-600"
-                  : "w-2 bg-stone-300 hover:bg-stone-400"
+                ${
+                  index === currentIndex
+                    ? "w-8 bg-gradient-to-r from-orange-500 to-orange-600"
+                    : "w-2 bg-stone-300 hover:bg-stone-400"
                 }
               `}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            />
-          ))}
-          {RECOMMENDATIONS.length > 10 && (
-            <span className="text-stone-400 text-xs ml-1">+{RECOMMENDATIONS.length - 10}</span>
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              />
+            ),
           )}
         </div>
-        <span className="text-stone-400 text-sm font-mono">
-          {String(RECOMMENDATIONS.length).padStart(2, "0")}
-        </span>
       </div>
 
       {/* Auto-play indicator */}
@@ -463,9 +509,10 @@ export function RecommendationsSection() {
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
           className={`
             text-xs font-mono uppercase tracking-wider px-4 py-2 rounded-full transition-all
-            ${isAutoPlaying
-              ? "bg-orange-100 text-orange-600"
-              : "bg-stone-200 text-stone-500"
+            ${
+              isAutoPlaying
+                ? "bg-orange-100 text-orange-600"
+                : "bg-stone-200 text-stone-500"
             }
           `}
         >
