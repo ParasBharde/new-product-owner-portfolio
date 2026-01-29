@@ -52,8 +52,10 @@ const categoryIcons: Record<string, typeof Lightbulb> = {
 export function AbstractProjectVisual({ projectIndex, category, title }: AbstractProjectVisualProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [particles, setParticles] = useState<any[]>([])
   const [floatOffset, setFloatOffset] = useState(0);
 
+  
   // Mouse tracking
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -98,15 +100,19 @@ export function AbstractProjectVisual({ projectIndex, category, title }: Abstrac
     setIsHovering(false);
   };
 
-  // Generate floating particles
-  const particles = Array.from({ length: 6 }, (_, i) => ({
-    id: i,
-    size: 4 + Math.random() * 6,
-    x: 15 + Math.random() * 70,
-    y: 15 + Math.random() * 70,
-    delay: i * 0.5,
-    duration: 3 + Math.random() * 2,
-  }));
+  useEffect(() => {
+    const generated = Array.from({ length: 12 }).map((_, i) => ({
+      id: i,
+      size: Math.random() * 6 + 4,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      delay: Math.random() * 2,
+      duration: 6 + Math.random() * 4,
+    }));
+
+    setParticles(generated);
+  }, []);
+
 
   // Decorative lines
   const lines = Array.from({ length: 4 }, (_, i) => ({
@@ -115,6 +121,7 @@ export function AbstractProjectVisual({ projectIndex, category, title }: Abstrac
     length: 40 + i * 15,
     delay: i * 0.2,
   }));
+  if (!particles.length) return null;
 
   return (
     <motion.div
@@ -213,7 +220,8 @@ export function AbstractProjectVisual({ projectIndex, category, title }: Abstrac
         />
 
         {/* Floating particles */}
-        {particles.map((particle) => (
+        {particles.length > 0 && particles.map((particle) => (
+          console.log('particle', particle),
           <motion.div
             key={particle.id}
             className={`absolute rounded-full bg-gradient-to-br ${colors.primary}`}
@@ -236,7 +244,8 @@ export function AbstractProjectVisual({ projectIndex, category, title }: Abstrac
               repeat: Infinity,
               ease: "easeInOut",
             }}
-          />
+          >
+            </motion.div>
         ))}
 
         {/* Decorative lines */}
